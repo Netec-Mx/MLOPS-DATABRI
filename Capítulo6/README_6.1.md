@@ -1,17 +1,21 @@
-# **Laboratorio 1.1. Configuración del Entorno de Desarrollo en Azure.**
+# **Laboratorio 6.1. Configuración del entorno de desarrollo en Azure.**
 
 ## **Objetivo de la práctica:**
+
 Al finalizar la práctica, serás capaz de:
+
 - Configurar un nuevo proyecto en Azure Machine Learning Studio.
 - Preparar el entorno para un modelo.
 
 ## **Objetivo Visual:**
+
 Realizarás la creación de un Workspace de Azure Machine Learning Studio y se dará de alta una libreta de Jupyter para la validación del ambiente.
 
 ![Diagrama 1](../images/imgl1/img0.png)
 
 ## **Duración aproximada:**
-- 50 minutos.
+
+- 120 minutos.
 
 ## **Prerequisitos:**
 - Tener una cuenta activa en Azure.
