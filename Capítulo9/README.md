@@ -10,7 +10,7 @@ Al finalizar la práctica, serás capaz de:
 
 ## Objetivo Visual:
 
-![diagrama1](../images/imgl6/img0.png)
+![diagrama1](../images/imgl9/img0.png)
 
 ## Duración aproximada:
 - 60 minutos.
@@ -46,11 +46,11 @@ En esta sección, vas a entrenar un modelo de Machine Learning para predecir si 
 
 7. Escribe el siguiente nombre: **`titanic-model`**, y haz clic en el botón **`Create`**.
 
-![mlnot2](../images/imgl6/img1.png)
+![mlnot2](../images/imgl9/img1.png)
 
 8. Repite los pasos, pero selecciona la carpeta creada y crea un archivo llamado **`titanic`** de tipo **Notebook**.
 
-![mlnot3](../images/imgl6/img2.png)
+![mlnot3](../images/imgl9/img2.png)
 
 9. Haz clic en el botón **`Create`**.
 
@@ -90,7 +90,7 @@ df.to_csv("titanic.csv", index=False)
 df.head()
 ```
 
-![mlnot3](../images/imgl6/img3.png)
+![mlnot3](../images/imgl9/img3.png)
 
 12. Carga el dataset **Titanic** desde un archivo CSV y regístralo en el workspace de Azure Machine Learning para que esté disponible en futuras ejecuciones si es necesario si te aparece un **Warning** puedes omitirlo por el momento.
 
@@ -114,7 +114,7 @@ dataset = dataset.register(workspace=ws, name='titanic', description='Dataset Ti
 print(f"Dataset registrado: {dataset.name}")
 ```
 
-![mlnot3](../images/imgl6/img4.png)
+![mlnot3](../images/imgl9/img4.png)
 
 13. Antes de entrenar el modelo, necesitas limpiar y preparar los datos. Elimina las filas con valores nulos y selecciona las características relevantes para el modelo.
 
@@ -134,7 +134,7 @@ print(f"Tamaño del conjunto de entrenamiento: {X_train.shape}")
 print(f"Tamaño del conjunto de prueba: {X_test.shape}")
 ```
 
-![mlnot3](../images/imgl6/img5.png)
+![mlnot3](../images/imgl9/img5.png)
 
 14.  Entrena el modelo de clasificación *Random Forest* utilizando las características seleccionadas. Este modelo aprenderá a predecir si un pasajero sobrevivió:
 
@@ -158,7 +158,7 @@ print("Reporte de Clasificación:")
 print(report)
 ```
 
-![mlnot3](../images/imgl6/img6.png)
+![mlnot3](../images/imgl9/img6.png)
 
 - El modelo es más eficaz para predecir la supervivencia (clase 1) que la no supervivencia (clase 0).
 - Tiene un buen desempeño en identificar correctamente a los sobrevivientes (recall alto en clase 1), pero tiene dificultades para identificar correctamente a los que no sobrevivieron (recall bajo en clase 0).
@@ -181,7 +181,7 @@ model = Model.register(workspace=ws,
 print(f"Modelo registrado: {model.name} - {model.version}")
 ```
 
-![mlnot3](../images/imgl6/img7.png)
+![mlnot3](../images/imgl9/img7.png)
 
 16. Crea un nuevo entorno personalizado para el modelo:
 
@@ -299,7 +299,7 @@ response = requests.post(scoring_uri, data=json.dumps(data), headers=headers)
 print(f"Respuesta del servicio: {response.json()}")
 ```
 
-![mlnot3](../images/imgl6/img8.png)
+![mlnot3](../images/imgl9/img8.png)
 
 19. En este ejemplo modificado y con un perfil de pasajero que tiene más probabilidades de sobrevivir:
 
@@ -323,7 +323,7 @@ response = requests.post(scoring_uri, data=json.dumps(data), headers=headers)
 print(f"Respuesta del servicio: {response.json()}")
 ```
 
-![mlnot3](../images/imgl6/img9.png)
+![mlnot3](../images/imgl9/img9.png)
 
 Entrenaste un modelo de clasificación para predecir la supervivencia de pasajeros del Titanic utilizando un modelo Random Forest. Posteriormente, registraste y desplegaste este modelo como un servicio web en Azure Machine Learning. Finalmente, validaste el servicio desplegado enviando una solicitud de predicción con datos de ejemplo.
 
@@ -347,7 +347,7 @@ service.update(enable_app_insights=True)
 print("Application Insights habilitado para el servicio web.")
 ```
 
-![mlnot3](../images/imgl6/img10.png)
+![mlnot3](../images/imgl9/img10.png)
 
 2.  Genera solicitudes de predicción para que el servicio web procese datos. Esto permitirá que se recopilen datos en **Azure Application Insights**, que luego se usarán en **Power BI**.
 
@@ -373,19 +373,19 @@ for data in test_data:
     print(f"Respuesta del servicio: {response.json()}")
 ```
 
-![mlnot3](../images/imgl6/img11.png)
+![mlnot3](../images/imgl9/img11.png)
 
 3.  Con el endpoint desplegado, obtendrás la **URL** de **Application Insights**. Selecciona tu endpoint; `recuerda ir al menú lateral izquierdo y seleccionar **Endpoints.**`
 
 4.  Dentro de las propiedades, busca la **URL** hasta el final de la pantalla y da **clic**.
 
-![mlnot4](../images/imgl6/img12.png)
+![mlnot4](../images/imgl9/img12.png)
 
 5.  Se abrirá otra pestaña con el servicio **Application Insights**.
 
 6.  Expande la propiedad del menú lateral izquierdo llamado **Monitoring** y selecciona **`Logs`**.
 
-![mlnot4](../images/imgl6/img13.png)
+![mlnot4](../images/imgl9/img13.png)
 
 7.  Puedes cerrar la ventana emergente en la cruz superior derecha.
 
@@ -396,7 +396,7 @@ requests
 | take 10
 ```
 
-![mlnot4](../images/imgl6/img14.png)
+![mlnot4](../images/imgl9/img14.png)
 
 > [!IMPORTANT]
 > **Los siguientes pasos serán de lectura solamente, ya que, si no tienes una cuenta empresarial para autenticarte en Azure y Power BI, no podrás autenticarte ni crear los reportes. PUEDE TOMARLOS COMO REFERENCIA Y AVANZAR A LA TAREA #3**
@@ -436,17 +436,17 @@ requests
 
 3.  Selecciona la propiedad **`Export`** de la barra de propiedades y da clic en **`Export CSV` (All columns)**
 
-![mlnot4](../images/imgl6/img15.png)
+![mlnot4](../images/imgl9/img15.png)
 
 4.  ¡Muy bien! Ahora, abre **Power BI Desktop** o **Power BI Web** y autentícate.
 
 5.  En la pantalla de bienvenida, selecciona la opción **`Obtener datos de otros orígenes`**.
 
-![mlnot4](../images/imgl6/img16.png)
+![mlnot4](../images/imgl9/img16.png)
 
 6.  En la ventana emergente, selecciona la opción **`Texto o CSV`** y busca los datos descargados en el paso anterior.
 
-![mlnot4](../images/imgl6/img17.png)
+![mlnot4](../images/imgl9/img17.png)
 
 7.  En la siguiente ventana emergente, da clic en el botón **`Cargar`**.
 
@@ -454,33 +454,33 @@ requests
 
 9.  Selecciona la gráfica de **Gráfico de columnas apiladas** y se colocará en el canvas.
 
-![mlnot4](../images/imgl6/img18.png)
+![mlnot4](../images/imgl9/img18.png)
 
 10. En las propiedades de los ejes, configura en **X = duration** y en el eje **Y = resultCode**. El resultado será el `recuento de código por duración`.
 
-![mlnot4](../images/imgl6/img19.png)
+![mlnot4](../images/imgl9/img19.png)
 
 11. La gráfica se mostrará así:
 
-![mlnot4](../images/imgl6/img20.png)
+![mlnot4](../images/imgl9/img20.png)
 
 12. Agrega una segunda gráfica de tipo **Gráfico de líneas**.
 
-![mlnot4](../images/imgl6/img21.png)
+![mlnot4](../images/imgl9/img21.png)
 
 13. Para los ejes de esta gráfica, configura **X = timestamp [UTC]** y eje **Y = resultCode** con una leyenda de **timestamp[UTC]**.
 
-![mlnot4](../images/imgl6/img22.png)
+![mlnot4](../images/imgl9/img22.png)
 
 14. Una vez configuradas las gráficas demostrativas, puedes publicar tu reporte. Da clic en la sección **`Publicar`**.
 
-![mlnot4](../images/imgl6/img23.png)
+![mlnot4](../images/imgl9/img23.png)
 
 15. En la ventana emergente, da clic en **`Guardar`** y después elige el lugar donde deseas guardar el archivo.
 
 16. Ya que está guardado, te saldrá una ventana emergente para publicarlo en el workspace de **Power BI**; selecciónalo.
 
-![mlnot4](../images/imgl6/img24.png)
+![mlnot4](../images/imgl9/img24.png)
 
 17. Espera el proceso de publicación y da clic en el botón **`Entendido`**.
 
@@ -532,4 +532,4 @@ delete_service_if_exists(service_name, ws)
 ### Resultado esperado:
 El resultado esperado del laboratorio finalmente es ver las gráficas con la información que se generó desde la implementación de tu modelo.
 
-![imagen resultado](../images/imgl6/img25.png)
+![imagen resultado](../images/imgl9/img25.png)
