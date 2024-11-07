@@ -1,4 +1,4 @@
-# Laboratorio 1.2. Ciclo de Vida de MLOps.
+# Laboratorio 6.2. Ciclo de Vida de MLOps.
 
 ## Objetivo de la práctica:
 Al finalizar la práctica, serás capaz de:
@@ -7,7 +7,7 @@ Al finalizar la práctica, serás capaz de:
 ## Objetivo Visual:
 Fases del ciclo de vida de machine learning.
 
-![diagrama1](../images/imgl2/img0.png)
+![diagrama1](../images/imgl6.2/img0.png)
 
 ## Duración aproximada:
 - 50 minutos.
@@ -35,7 +35,7 @@ Fases del ciclo de vida de machine learning.
 
 2.  Busca el servicio de **`Azure Storage Account`** en la parte superior central del portal y haz clic en **`Storage accounts`**.
 
-![storaccount](../images/imgl2/img1.png)
+![storaccount](../images/imgl6.2/img1.png)
 
 3.  En la parte superior izquierda, haz clic en el botón **`Create`**.
 
@@ -48,7 +48,7 @@ Fases del ciclo de vida de machine learning.
 | Name            | **mldataworkspaceXXXX** Sustituye las **"X"** por valores aleatorios. |
 | Region          | **East US** |
 
-![storaccouncreate](../images/imgl2/img2.png)
+![storaccouncreate](../images/imgl6.2/img2.png)
 
 > [!IMPORTANT]
 > **El resto de los valores se quedarán por defecto.**
@@ -65,14 +65,14 @@ Fases del ciclo de vida de machine learning.
 
 8.  Recolecta la cadena de conexión del **storage account** para realizar la **autenticación** más adelante.
 
-![storaccountauth](../images/imgl2/img3.png)
+![storaccountauth](../images/imgl6.2/img3.png)
 
 > [!NOTE]
 > Guárdala en un bloc de notas temporalmente en tu computadora.
 
 9.  Para el siguiente paso, haz clic en la sección **`Containers`** y crea un contenedor llamado **dataml**.
 
-![storaccountcont](../images/imgl2/img4.png)
+![storaccountcont](../images/imgl6.2/img4.png)
 
 10. Haz clic en el botón **`Create`**.
 
@@ -90,13 +90,13 @@ Fases del ciclo de vida de machine learning.
 
 5. Ahora, haz clic en la opción **`Files`** y después en **`Create a new folder`**.
 
-![mlnotebookfolder](../images/imgl2/img6.png)
+![mlnotebookfolder](../images/imgl6.2/img6.png)
 
 6. En la ventana emergente, coloca el nombre **`mlopsdlc-iris`** y haz clic en **`Create`**.
 
 7. ¡Bien! Una vez que la carpeta ha sido la carpeta creada, pasa el puntero sobre la carpeta y se habilitarán 3 puntos al costado derecho. Haz clic para abrir el menú y selecciona **`Create new file`**.
 
-![mlnotebookfile](../images/imgl2/img8.png)
+![mlnotebookfile](../images/imgl6.2/img8.png)
 
 8. En la ventana emergente, define el nombre de la libreta como **`irisnotebook.ipynb`** y asegúrate de que sea de tipo **Notebook**.
 
@@ -163,7 +163,7 @@ add_headers_and_upload()
 
 11. Para ejecutar la celda, da clic en el botón de **`Play`**.
 
-![mlnotebookfile](../images/imgl2/img12.png)
+![mlnotebookfile](../images/imgl6.2/img12.png)
 
 > [!IMPORTANT]
 > El código viene documentado con comentarios. Pero, a grandes rasgos, descargamos la fuente de datos, se ajustan los encabezados y se respalda la información en el Storage Account.
@@ -173,7 +173,7 @@ add_headers_and_upload()
 
 ### Resultado esperado.
 
-![mlnotebookfile](../images/imgl2/img9.png)
+![mlnotebookfile](../images/imgl6.2/img9.png)
 
 > **¡TAREA FINALIZADA!**
 
@@ -185,9 +185,9 @@ add_headers_and_upload()
 
 1.  Agrega otra celda más para definir el código que preprocesará el archivo `iris.csv`. Pasa el puntero sobre el resultado de la celda anterior y, en el cuadro rojo de la imagen, se habilitará la opción **Code** para agregar una celda de código.
 
-![mlnotebookcode](../images/imgl2/img10.png)
+![mlnotebookcode](../images/imgl6.2/img10.png)
 
-![mlnotebookcode1](../images/imgl2/img11.png)
+![mlnotebookcode1](../images/imgl6.2/img11.png)
 
 2.  Agrega el siguiente código para el preprocesamiento:
 
@@ -241,11 +241,11 @@ preprocess_data(input_path, output_path)
 
 4.  Si todo sale bien, el resultado será como en la siguiente imagen:
 
-![mlnotebookcode2](../images/imgl2/img13.png)
+![mlnotebookcode2](../images/imgl6.2/img13.png)
 
 5.  Adicionalmente, puedes observar en el árbol de directorios y archivos lateral izquierdo una nueva carpeta llamada **preprocessed_data** con el contenido procesado.
 
-![mlnotebookcode2r](../images/imgl2/img14.png)
+![mlnotebookcode2r](../images/imgl6.2/img14.png)
 
 > [!NOTE]
 > Hasta ahora vas bien; llevas tres fases del ciclo de vida de Machine Learning.
@@ -300,11 +300,11 @@ print("Modelo entrenado y guardado en outputs/model.pkl")
 
 5.  Si todo sale bien, obtendrás el siguiente resultado.
 
-![mlnotebookcode3](../images/imgl2/img15.png)
+![mlnotebookcode3](../images/imgl6.2/img15.png)
 
 6.  Adicionalmente, obtendrás la carpeta **outputs** creada con los modelos entrenados.
 
-![mlnotebookcode3r](../images/imgl2/img16.png)
+![mlnotebookcode3r](../images/imgl6.2/img16.png)
 
 > **¡TAREA FINALIZADA!**
 
@@ -343,7 +343,7 @@ print(f"Modelo registrado como 'iris-model' en el espacio de trabajo.")
 
 5.  El resultado será como el de la imagen.
 
-![mlnotebookmodel1](../images/imgl2/img17.png)
+![mlnotebookmodel1](../images/imgl6.2/img17.png)
 
 > [!NOTE]
 > El modelo se registra en tu **Workspace** en la sección lateral izquierda llamada **Models**.
@@ -365,13 +365,13 @@ print(f"Modelo registrado como 'iris-model' en el espacio de trabajo.")
 > [!CAUTION]
 > La extensión del nombre del archivo debe ser **yml**, aunque la propiedad **File type** diga **Yaml**.
 
-![mlnotebookmodel2](../images/imgl2/img18.png)
+![mlnotebookmodel2](../images/imgl6.2/img18.png)
 
 4.  Haz clic en **`Create`**.
 
 5.  Verifica la creación del archivo en el directorio.
 
-![mlnotebookmodel3](../images/imgl2/img19.png)
+![mlnotebookmodel3](../images/imgl6.2/img19.png)
 
 6.  Abre el archivo y carga la siguiente configuración que define las dependencias para el modelo a implementar:
 
@@ -393,14 +393,14 @@ dependencies:
 
 7.  Da clic en la opción **`Save`**, como lo muestra la imagen.
 
-![mlnotebookmodel4](../images/imgl2/img20.png)
+![mlnotebookmodel4](../images/imgl6.2/img20.png)
 
 > [!NOTE]
 > Después de guardar el archivo, puedes cerrarlo sin problemas.
 
 8.  Repite los mismos pasos para crear un archivo de tipo **Python** llamado **`score.py`**.
 
-![mlnotebookmodel5](../images/imgl2/img21.png)
+![mlnotebookmodel5](../images/imgl6.2/img21.png)
 
 9.  Una vez creado, copia el siguiente código y pégalo en el archivo.
 
@@ -488,7 +488,7 @@ print(f"Servicio desplegado en ACI: {service.scoring_uri}")
 
 13. Una vez terminado, el resultado deberá ser como la imagen.
 
-![mlnotebookmodel6](../images/imgl2/img22.png)
+![mlnotebookmodel6](../images/imgl6.2/img22.png)
 
 14. Copia el valor **(URL)** del parámetro **Servicio desplegado en ACI** de la implementación y **guárdalo temporalmente en tu bloc de notas**.
 
@@ -546,7 +546,7 @@ except Exception as e:
 
 4.  Una vez cambiada la URL de inferencia, ejecuta la celda y observa el resultado.
 
-![mlnotebookmodel7](../images/imgl2/img23.png)
+![mlnotebookmodel7](../images/imgl6.2/img23.png)
 
 > [!NOTE]
 > Puedes buscar el nombre de la flor en una pestaña de tu navegador para ver la imagen. Adicionalmente, en la tabla observarás las propiedades que hacen diferente a cada iris.
@@ -571,7 +571,7 @@ data = {
 
 6.  Ejecuta la celda con el código. El resultado deberá ser como el de la imagen.
 
-![mlnotebookmodel8](../images/imgl2/img24.png)
+![mlnotebookmodel8](../images/imgl6.2/img24.png)
 
 > **¡TAREA FINALIZADA!**
 
@@ -581,4 +581,4 @@ data = {
 
 El resultado esperado es que no haya habido errores en ninguna de las tareas y pasos. Debes verificar que el modelo realice las proyecciones correctas, como se muestra en la imagen. Recuerda que cambiando los datos, cambia la proyección.
 
-![mlnotebookmodel9](../images/imgl2/img24.png)
+![mlnotebookmodel9](../images/imgl6.2/img24.png)
