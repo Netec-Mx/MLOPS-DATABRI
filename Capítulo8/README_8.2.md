@@ -1,4 +1,4 @@
-# Laboratorio 8.4. Despliegue, Monitoreo y Evaluación de Modelos.
+# Laboratorio 8.2. Despliegue, Monitoreo y Evaluación de Modelos.
 
 ## Objetivo de la práctica:
 Al finalizar la práctica, serás capaz de:
@@ -8,7 +8,7 @@ Al finalizar la práctica, serás capaz de:
 
 ## Objetivo visual:
 
-![diagrama1](../images/imgl5/img0.png)
+![diagrama1](../images/imgl8.2/img0.png)
 
 ## Duración aproximada:
 - 105 minutos.
@@ -34,19 +34,19 @@ En este paso, configura tu entorno de trabajo para monitorear y evaluar modelos 
 
 5. Dentro de tu workspace, selecciona **`Notebooks`** del menú lateral izquierdo.
 
-![mlnote](../images/imgl5/img1.png)
+![mlnote](../images/imgl8.2/img1.png)
 
 6. En tu carpeta **raíz**, haz clic en los tres puntos para expandir el menú y selecciona **`Create new folder`**.
 
-![mlnote1](../images/imgl5/img2.png)
+![mlnote1](../images/imgl8.2/img2.png)
 
 7. Escribe el siguiente nombre: **`monitor-model-notebook`**, y haz clic en el botón **`Create`**.
 
-![mlnot2](../images/imgl5/img3.png)
+![mlnot2](../images/imgl8.2/img3.png)
 
 8. Repite los pasos, pero selecciona la carpeta creada y crea un archivo llamado **`monitor`** de tipo **Notebook**.
 
-![mlnot3](../images/imgl5/img4.png)
+![mlnot3](../images/imgl8.2/img4.png)
 
 9. Haz clic en el botón **`Create`**.
 
@@ -101,7 +101,7 @@ print(f"Mean Squared Error: {mse:.2f}")
 joblib.dump(model, 'model.pkl')
 ```
 
-![mlnot4](../images/imgl5/img5.png)
+![mlnot4](../images/imgl8.2/img5.png)
 
 2. Posteriormente, registra el modelo en tu **Workspace**. Escribe el siguiente código en otra celda:
 
@@ -117,13 +117,13 @@ model = Model.register(model_path="model.pkl",  # Ruta al archivo del modelo
                        workspace=ws)
 ```
 
-![mlnot4](../images/imgl5/img6.png)
+![mlnot4](../images/imgl8.2/img6.png)
 
 3.  Crea el siguiente script de python llamado **score.py**.
 
 4.  Dentro de tu carpeta **monitor-model-notebook**, da clic en los tres puntos para abrir el menú y selecciona **`Create new file`**; en la ventana emergente escribe: **`score.py`** de tipo **Python**.
 
-![mlnot4](../images/imgl5/img7.png)
+![mlnot4](../images/imgl8.2/img7.png)
 
 5.  Clic en el boton **`Create`**.
 
@@ -302,7 +302,7 @@ Dentro de esta tarea, explora la implementación de la herramienta Application I
 enable_app_insights=True
 ```
 
-![mlnot4](../images/imgl5/img8.png)
+![mlnot4](../images/imgl8.2/img8.png)
 
 > [!NOTE]
 > Esto activará el servicio de **Azure Application Insights**.
@@ -319,31 +319,31 @@ enable_app_insights=True
 
 4. Dentro de las propiedades, busca la **URL** hasta el final de la pantalla y da **clic**.
 
-![mlnot4](../images/imgl5/img9.png)
+![mlnot4](../images/imgl8.2/img9.png)
 
 5. Se abrirá otra pestaña con el servicio **Application Insights**.
 
 6. La idea es navegar por las opciones para interpretar las gráficas con los datos recolectados.
 
-![mlnot4](../images/imgl5/img10.png)
+![mlnot4](../images/imgl8.2/img10.png)
 
 7. Esta es una lista de opciones para investigar; todas las encontrarás en el menú lateral izquierdo en la sección **Investigate**.
 
 - **Application map:** Gráfico telemétrico de las llamadas a tu endpoint.
 
-![mlnot4](../images/imgl5/img11.png)
+![mlnot4](../images/imgl8.2/img11.png)
 
 - **Transaction search:** Investigación sobre el detalle de las llamadas al endpoint; da clic en **See all data in the last 24 hours**.
 
-![mlnot4](../images/imgl5/img12.png)
+![mlnot4](../images/imgl8.2/img12.png)
 
 - **Failures:** Observarás la cantidad de errores que puede tener el endpoint.
 
-![mlnot4](../images/imgl5/img13.png)
+![mlnot4](../images/imgl8.2/img13.png)
 
 - **Performance:** Promedio de tiempos de respuesta de las llamadas y actividad sobre el período de tiempo.
 
-![mlnot4](../images/imgl5/img14.png)
+![mlnot4](../images/imgl8.2/img14.png)
 
 8. Esas son algunas de las más populares. **Tómate tu tiempo e investiga otras propiedades antes de continuar.**
 
@@ -351,23 +351,23 @@ enable_app_insights=True
 
 10. Da clic en la opción **`Metrics`** de la sección **Monitoring**.
 
-![mlnot4](../images/imgl5/img15.png)
+![mlnot4](../images/imgl8.2/img15.png)
 
 11. Da clic en la opción **`Scope`**.
 
-![mlnot4](../images/imgl5/img16.png)
+![mlnot4](../images/imgl8.2/img16.png)
 
 12. En el menú lateral derecho, desmarca la opción actual y selecciona la casilla de tu workspace. Luego, haz clic en **`Apply`**.
 
-![mlnot4](../images/imgl5/img17.png)
+![mlnot4](../images/imgl8.2/img17.png)
 
 13. En la opción de **Metric**, selecciona del menú desplegable **Model Deploy Started**.
 
-![mlnot4](../images/imgl5/img18.png)
+![mlnot4](../images/imgl8.2/img18.png)
 
 14. Agrega otra gráfica dando clic en la opción **`New chart`**.
 
-![mlnot4](../images/imgl5/img19.png)
+![mlnot4](../images/imgl8.2/img19.png)
 
 15. Repite el paso anterior para cambiar la métrica de esta nueva gráfica. Selecciona la opción **`Model Register Succeeded`**.
 
@@ -376,17 +376,17 @@ enable_app_insights=True
 
 16. Una vez que tengas tus gráficas, guárdalas. Da clic en la opción superior **`Share`**.
 
-![mlnot4](../images/imgl5/img20.png)
+![mlnot4](../images/imgl8.2/img20.png)
 
 17. Del menú desplegable, selecciona **`Send to Workbook`**.
 
 18. Selecciona las últimas cuatro casillas y da clic en **`Send to Workbook`**.
 
-![mlnot4](../images/imgl5/img21.png)
+![mlnot4](../images/imgl8.2/img21.png)
 
 19. En la nueva ventana, da clic en el ícono de guardado.
 
-![mlnot4](../images/imgl5/img22.png)
+![mlnot4](../images/imgl8.2/img22.png)
 
 20. En la ventana lateral derecha, verifica tu suscripción asignada y escribe el siguiente nombre para el workbook: **`PerformanceModelWorkbook`**.
 
@@ -410,19 +410,19 @@ Para realizar consultas en Application Insights, puedes utilizar el Kusto Query 
 
 5. En el panel de propiedades, selecciona la opción **`Queries`**.
 
-![mlnot4](../images/imgl5/img23.png)
+![mlnot4](../images/imgl8.2/img23.png)
 
 6. En la parte inferior, habilita consultas, expande la carpeta **Performance** y da doble clic en **`Operations performance`**.
 
-![mlnot4](../images/imgl5/img24.png)
+![mlnot4](../images/imgl8.2/img24.png)
 
 7. Automáticamente agregará la consulta y la ejecutará. En la parte inferior del código de la consulta podrás observar el resultado.
 
-![mlnot4](../images/imgl5/img25.png)
+![mlnot4](../images/imgl8.2/img25.png)
 
 8. También puedes dar clic en la opción **`Chart`** para ver el resultado en gráfica.
 
-![mlnot4](../images/imgl5/img26.png)
+![mlnot4](../images/imgl8.2/img26.png)
 
 9. Repite los pasos **6, 7 y 8** para observar la consulta **Response time trend**.
 
@@ -433,7 +433,7 @@ Con KQL y Application Insights, puedes realizar un análisis profundo de tus mé
 ### Resultado esperado
 El resultado final será representado con la última consulta realizada.
 
-![imagen resultado](../images/imgl5/img27.png)
+![imagen resultado](../images/imgl8.2/img27.png)
 
 > **¡ELIMINAR ENDPOINT!**
 
