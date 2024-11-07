@@ -1,4 +1,4 @@
-# Nombre del laboratorio 
+# Laboratorio 5. Entrenamiento y evaluación de modelos 
 
 ## Objetivo de la práctica:
 Al finalizar la práctica, serás capaz de:
@@ -12,7 +12,8 @@ Crear un diagrama o imagen que resuma las actividades a realizar, un ejemplo es 
 ![diagrama1](../images/img1.png)
 
 ## Duración aproximada:
-- xx minutos.
+
+- 30 minutos.
 
 ## Tabla de ayuda:
 Agregar una tabla con la información que pueda requerir el participante durante el laboratorio, como versión de software, IPs de servers, usuarios y credenciales de acceso.
