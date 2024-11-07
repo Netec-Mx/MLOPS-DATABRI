@@ -38,11 +38,11 @@ En esta sección, vas a entrenar un modelo de Machine Learning para predecir si 
 
 5. Dentro de tu workspace, selecciona **`Notebooks`** del menú lateral izquierdo.
 
-![mlnote](../images/imgl5/img1.png)
+![mlnote](../images/imgl9/img1_extra.png)
 
 6. En tu carpeta **raíz**, haz clic en los tres puntos para expandir el menú y selecciona **`Create new folder`**.
 
-![mlnote1](../images/imgl5/img2.png)
+![mlnote1](../images/imgl9/img2_extra.png)
 
 7. Escribe el siguiente nombre: **`titanic-model`**, y haz clic en el botón **`Create`**.
 
