@@ -1,4 +1,4 @@
-# Nombre del laboratorio 
+# Laboratorio 4. Integración de Azure Databricks y Azure DevOps en un Proyecto de Machine Learning 
 
 ## Objetivo de la práctica:
 Al finalizar la práctica, serás capaz de:
