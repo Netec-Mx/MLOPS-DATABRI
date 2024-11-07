@@ -1,4 +1,4 @@
-# Laboratorio 7. Pipeline de MLOps en Azure DevOps 
+# Laboratorio 7.1. Pipeline de MLOps en Azure DevOps 
 
 ## Objetivo de la práctica:
 Al finalizar la práctica, serás capaz de:
