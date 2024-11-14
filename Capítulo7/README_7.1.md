@@ -215,7 +215,7 @@ Paso 9. Da clic en el nombre para entrar a la consola de los detalles de la ejec
 
 ![lab7.1-13](../images/imgl7.1/img13.png)
 
-**TAREA FINALIZADA:**
+**¡TAREA FINALIZADA!**
 
 El pipeline de entrenamiento y registro ha sido configurado y ejecutado exitosamente en Azure DevOps.
 
@@ -296,7 +296,7 @@ Paso 10. Da clic en el menu lateral izquierdo **Pipelines** luego clic en tu pip
 
 ![lab7.1-18](../images/imgl7.1/img18.png)
 
-**TAREA FINALIZADA:**
+**¡TAREA FINALIZADA!**
 
 La etapa de validación del modelo ha sido añadida al pipeline para verificar el rendimiento antes del despliegue.
 
@@ -428,7 +428,7 @@ Paso 17. Recuerda que tambien puedes revisar en la interfaz de **Azure Databrick
 ![lab7.1-30](../images/imgl7.1/img30.png)
 ![lab7.1-31](../images/imgl7.1/img31.png)
 
-**TAREA FINALIZADA:**
+**¡TAREA FINALIZADA!**
 
 Has completado el registro del modelo validado en Azure Databricks, donde podrás gestionar sus versiones
 

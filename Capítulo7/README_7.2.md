@@ -69,7 +69,7 @@ Paso 13. Clic en **Create**.
 
 **NOTA:** El proceso tardara unos segundos.
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 El dataset ha sido creado y está disponible bajo el nombre `producto`.
 

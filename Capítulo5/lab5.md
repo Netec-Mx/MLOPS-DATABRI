@@ -41,7 +41,7 @@ df_ml.show(5)
 
 ![lab5-2](../images/imgl5/img2.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 El dataset está listo para el entrenamiento de los modelos con las columnas seleccionadas y limpiadas.
 
@@ -91,7 +91,7 @@ with mlflow.start_run(run_name="Modelo_V1"):
 
 **IMPORTANTE:** Recuerda que tambien puedes verificar el experimento en la interfaz grafica de Databricks. Seleccionando **Experiments** en el menu lateral izquierdo.
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 La primera versión del modelo ha sido entrenada y registrada como un experimento en Databricks MLflow.
 
@@ -120,7 +120,7 @@ with mlflow.start_run(run_name="Modelo_V2"):
 
 ![lab5-5](../images/imgl5/img5.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 La segunda versión del modelo ha sido entrenada con regularización y registrada en MLflow para comparación en el mismo experimento.
 
@@ -156,7 +156,7 @@ Paso 6. Repite el paso 5 y visualiza la metrica **RMSE**.
 
 ![lab5-11](../images/imgl5/img11.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Las métricas de ambas versiones del modelo han sido comparadas usando la interfaz de Experiments de Databricks.
 
@@ -252,7 +252,7 @@ plt.show()
 
 ![lab5-20](../images/imgl5/img20.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Ambas versiones del modelo han sido registradas y versionadas en Databricks Models para su comparación y análisis futuro.
 
