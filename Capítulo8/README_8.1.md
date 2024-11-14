@@ -1,7 +1,9 @@
 # Laboratorio 8.1. Despliegue de Servicio de Cómputo
 
 ## Objetivo de la práctica:
+
 Al finalizar la práctica, serás capaz de:
+
 - Configurar un entorno de Azure Machine Learning.
 - Entrenar un modelo de clasificación utilizando el dataset de diabetes.
 - Desplegar el modelo en un clúster de Azure Kubernetes Service (AKS).
@@ -13,6 +15,12 @@ Al finalizar la práctica, serás capaz de:
 
 ## Duración aproximada:
 - 105 minutos.
+
+---
+
+**[⬅️ Atrás](/Capítulo7/README_7.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo8/README_8.2.md)**
+
+---
 
 ## **Prerrequisitos:**
 
@@ -26,55 +34,51 @@ Al finalizar la práctica, serás capaz de:
 
 En esta tarea, prepara todo lo necesario para entrenar y desplegar el modelo, incluyendo el uso del Workspace en Azure Machine Learning, la configuración del entorno de trabajo y la carga del conjunto de datos.
 
-1. Dirígete al Portal de Azure e inicia sesión con tu cuenta en [Azure Portal](https://portal.azure.com/).
+Paso 1. Dirígete al Portal de Azure e inicia sesión con tu cuenta en [Azure Portal](https://portal.azure.com/).
 
-2. En la barra de búsqueda del portal, escribe **`Kubernetes Services`** y selecciona **`Kubernetes Services`**.
+Paso 2. En la barra de búsqueda del portal, escribe **`Kubernetes Services`** y selecciona **`Kubernetes Services`**.
 
-3. Haz clic en la parte superior izquierda llamada **`Create`** y en el menú desplegable selecciona **`Kubernetes cluster`**.
+Paso 3. Haz clic en la parte superior izquierda llamada **`Create`** y en el menú desplegable selecciona **`Kubernetes cluster`**.
 
 ![azkube](../images/imgl8.1/img1.png)
 
-4. En la configuración del clúster de Kubernetes **Create Kubernetes cluster**, configura lo siguiente:
+Paso 4. En la configuración del clúster de Kubernetes **Create Kubernetes cluster**, configura lo siguiente:
 
 | Parámetro       | Valores |
 |-----------------|---------|
 | Subscription    | Selecciona la **suscripción** de tu cuenta o la que se asignó para el curso. |
-| Resource Group  | Selecciona **mlrg-XXXX**. |
-| Cluster details | Selecciona **Dev/Test**. |
+| Resource Group  | Selecciona o crea **mlrg-XXXX**. |
+| Cluster preset configuration | Selecciona **Dev/Test**. |
 | Kubernetes cluster name | Escribe **kubemlcluster-XXXX**. |
-| Región | Selecciona **East US**. |
+| Región | Selecciona la región que te haya tocado. |
 
-> [!NOTE]
-> El resto de la configuración se quedará por defecto.
+**NOTA:** El resto de la configuración se quedará por defecto.
 
-5. Haz clic en la opción inferior **`Next`**.
+Paso 5. Haz clic en la opción inferior **`Next`**.
 
-6. En la sección **Node Pools**, haz clic en el nombre **`agentpool`**.
+Paso 6. En la sección **Node Pools**, haz clic en el nombre **`agentpool`**.
 
-7. Cambia la propiedad **Minimum node count** de **1** a **2**.
+Paso 7. Selecciona **Autoscale** y cambia la propiedad **Minimum node count** de **1** a **2**.
 
-**NOTA** La imagen de abajo dira que los nodos son de **3 a 5** pero para efectos de laboratorio de **1 a 2**.
+Paso 8. Verifica que esté seleccionado **`Autoscale - Recommended`** y marca la casilla **Enable public IP per node**.
 
-9. Verifica que esté seleccionado **`Autoscale - Recommended`** y marca la casilla **Enable public IP per node**.
-
-10. Haz clic en el botón **`Update`**.
+Paso 9. Haz clic en el botón **`Update`**.
 
 ![azkube1](../images/imgl8.1/img2.png) 
 
-10. Da clic en el botón **`Review + create`**. Espera a que valide la configuración.
+Paso 10. Da clic en el botón **`Review + create`**. Espera a que valide la configuración.
 
-11. Haz clic en el botón **`Create`**.
+Paso 11. Haz clic en el botón **`Create`**.
 
-> [!NOTE] 
-> Espera de **5 a 10 minutos** aproximadamente a que termine la creación del clúster.
+**NOTA:** Espera de **5 a 10 minutos** aproximadamente a que termine la creación del clúster.
 
-12. Una vez creado, haz clic en el botón **`Go to resource`**.
+Paso 12. Una vez creado, haz clic en el botón **`Go to resource`**.
 
-13. Ahora haz clic en la opción llamada **`Cloud Shell`**.
+Paso 13. Ahora haz clic en la opción llamada **`Cloud Shell`**.
 
 ![azkube2](../images/imgl8.1/img3.png)
 
-14. En la terminal inferior, escribe el siguiente comando; deberás sustituir los siguientes valores:
+Paso 14. En la terminal inferior, escribe el siguiente comando; deberás sustituir los siguientes valores:
 
 - --cluster-name
 - --resource-group
@@ -83,54 +87,59 @@ En esta tarea, prepara todo lo necesario para entrenar y desplegar el modelo, in
 az k8s-extension create --name azureml --extension-type Microsoft.AzureML.Kubernetes --config enableTraining=True enableInference=True inferenceRouterServiceType=LoadBalancer allowInsecureConnections=True InferenceRouterHA=False --cluster-type managedClusters --cluster-name <cluster> --resource-group <rg> --scope cluster
 ```
 
-15. Si te pide confirmación, escribe **Y** y espera la configuración.
+Paso 15. Si te pide confirmación, escribe **Y** y espera la configuración.
 
-> [!NOTE]
-> Espera un estimado de **5 a 20 minutos** a que termine de habilitar la extensión de Azure Machine Learning.
+**NOTA:** Estos pasos son demostrativos para la creación del cluster.
 
-16. En la barra de búsqueda del portal, escribe **`Machine Learning`** y selecciona **`Machine Learning`**.
+**NOTA:** Espera un estimado de **5 a 20 minutos** a que termine de habilitar la extensión de Azure Machine Learning.
 
-17. Usa el **Workspace** de Azure Machine Learning **existente** creado en el laboratorio 1.
+**NOTA:** 
 
-18. Una vez abierto el Workspace, selecciona del menú lateral izquierdo **`Compute`**.
+Paso 16. En la barra de búsqueda del portal, escribe **`Machine Learning`** y selecciona **`Machine Learning`**.
+
+Paso 17. Usa el **Workspace** de Azure Machine Learning **existente** creado en el laboratorio 1. Da clic en **Launch Studio**
+
+Paso 18. Una vez abierto el Workspace, selecciona del menú lateral izquierdo **`Compute`**.
 
 ![azmlcompute](../images/imgl8.1/img4.png)
 
-19. Selecciona la opción **Kubernetes clusters** y después el botón **`New`**. En el menú desplegable, haz clic en **`AksCompute`**.
+Paso 19. Selecciona la opción **Kubernetes clusters** y después el botón **`New`**. En el menú desplegable, haz clic en **`AksCompute`**.
 
 ![azmlcompute1](../images/imgl8.1/img5.png)
 
-20. En la ventana emergente lateral derecha, configura las propiedades como aparece en la imagen.
+Paso 20. En la ventana emergente lateral derecha, configura las propiedades como aparece en la imagen. Escribe el nombre **kubemlcompute-XX** cambia las **X** por las iniciales de tu nombre
 
 ![azmlcompute2](../images/imgl8.1/img6.png)
 
-21. Haz clic en el botón **`Attach`** y espera el proceso de asociación del clúster.
+Paso 21. Haz clic en el botón **`Attach`** y espera el proceso de asociación del clúster.
 
-22. Finalmente, podrás observar el clúster correctamente asociado.
+Paso 22. Finalmente, podrás observar el clúster correctamente asociado.
 
 ![azmlcompute3](../images/imgl8.1/img7.png)
 
-**Con esta tarea, has experimentado cómo crear un clúster de Azure Kubernetes Service y cómo asociarlo al Workspace de Azure Machine Learning. Para el entrenamiento, usaremos otro clúster de tipo Kubernetes. Esta tarea fue demostrativa.**
+**¡TAREA FINALIZADA!**
 
-> **¡TAREA FINALIZADA!**
+Con esta tarea, has experimentado cómo crear un clúster de Azure Kubernetes Service y cómo asociarlo al Workspace de Azure Machine Learning. **Para el entrenamiento, usaremos otro clúster de tipo Kubernetes. Esta tarea fue demostrativa.**
 
 ### Tarea 2. Preparación y Entrenamiento del Modelo.
 
 En esta tarea, configurarás todas las celdas necesarias para la preparación de los datos y el entrenamiento adecuado del modelo.
 
-1. Dentro del workspace de Azure ML, haz clic en la opción **Notebooks** del menú lateral izquierdo.
+Paso 1. Dentro del workspace de Azure ML, haz clic en la opción **Notebooks** del menú lateral izquierdo.
 
-2. Haz clic en la opción **`Files`** y crea una carpeta llamada **`diab-notebook`**.
+Paso 2. Haz clic en la opción **`Files`** y crea una carpeta llamada **`diab-notebook`**.
 
 ![azmlnote](../images/imgl8.1/img8.png)
 
-3. Dentro de la carpeta, crea un archivo de tipo Jupyter llamado **diab**.
+Paso 3. Dentro de la carpeta, crea un archivo de tipo Jupyter llamado **diab**.
 
 ![azmlnote1](../images/imgl8.1/img9.png)
 
-4. Haz clic en el botón **`Create`**.
+Paso 4. Haz clic en el botón **`Create`**.
 
-5. Haz clic en la opción **`Code`** para agregar la primera celda **(si ya aparece una celda, sólo pega el código de abajo)** y escribe el siguiente código que descargará los datos:
+**NOTA:** Si ya no tienes el nodo **mlcompute** puedes volverlo a crear.
+
+Paso 5. Haz clic en la opción **`Code`** para agregar la primera celda **(si ya aparece una celda, sólo pega el código de abajo)** y escribe el siguiente código que descargará los datos:
 
 ```
 # Descargar y Preparar el Dataset de Diabetes
@@ -147,7 +156,7 @@ df.head()
 
 ![azmlnote1](../images/imgl8.1/img17.png)
 
-6. **Agrega otra celda más** y escribe el siguiente código para convertir el objetivo (target) del dataset en una variable binaria:
+Paso 6. **Agrega otra celda más** y escribe el siguiente código para convertir el objetivo (target) del dataset en una variable binaria:
 
 ```
 # Convertir el target a binario: 1 si el valor es mayor a 140, 0 en caso contrario
@@ -159,7 +168,7 @@ df['target'].value_counts()
 
 ![azmlnote1](../images/imgl8.1/img18.png)
 
-7. Ejecuta el siguiente código en **otra celda** que guarda el dataset procesado en un archivo CSV:
+Paso 7. Ejecuta el siguiente código en **otra celda** que guarda el dataset procesado en un archivo CSV:
 
 ```
 # Guardar el dataset en un archivo CSV
@@ -171,7 +180,7 @@ df.to_csv('diabetes.csv', index=False)
 
 ![azmlnote1](../images/imgl8.1/img19.png)
 
-8. Divide el dataset en conjuntos de entrenamiento y prueba. Copia el siguiente código en otra celda:
+Paso 8. Divide el dataset en conjuntos de entrenamiento y prueba. Copia el siguiente código en otra celda:
 
 ```
 from sklearn.model_selection import train_test_split
@@ -191,7 +200,7 @@ print(y_test.value_counts())
 
 ![azmlnote1](../images/imgl8.1/img20.png)
 
-9. Entrena un modelo de regresión logística utilizando el conjunto de entrenamiento con el siguiente código:
+Paso 9. Entrena un modelo de regresión logística utilizando el conjunto de entrenamiento con el siguiente código:
 
 ```
 from sklearn.linear_model import LogisticRegression
@@ -209,7 +218,7 @@ print(f'Precisión del modelo en el conjunto de entrenamiento: {accuracy:.2f}')
 
 ![azmlnote1](../images/imgl8.1/img21.png)
 
-10. Evalúa el rendimiento del modelo en el conjunto de prueba con el siguiente código:
+Paso 10. Evalúa el rendimiento del modelo en el conjunto de prueba con el siguiente código:
 
 ```
 from sklearn.metrics import accuracy_score
@@ -224,7 +233,7 @@ print(f'Precisión del modelo en el conjunto de prueba: {accuracy:.2f}')
 
 ![azmlnote1](../images/imgl8.1/img22.png)
 
-11. Guarda el modelo entrenado en un archivo `.pkl` para su despliegue posterior en la carpeta **outputs**.
+Paso 11. Guarda el modelo entrenado en un archivo `.pkl` para su despliegue posterior en la carpeta **outputs**.
 
 ```
 import joblib
@@ -239,7 +248,7 @@ joblib.dump(model, 'outputs/model.pkl')
 
 ![azmlnote1](../images/imgl8.1/img23.png)
 
-12. Antes de proceder con el despliegue, valida el modelo entrenado con un ejemplo de predicción.
+Paso 12. Antes de proceder con el despliegue, valida el modelo entrenado con un ejemplo de predicción.
 
 ```
 # Ejemplo de características de entrada (primera fila de X_test)
@@ -254,17 +263,17 @@ print(f'Predicción para los datos de entrada: {"Tiene diabetes" if prediction[0
 ```
 ![azmlnote1](../images/imgl8.1/img24.png)
 
-13. El resultado de los archivos creados hasta el momento es como lo muestra la imagen:
+Paso 13. El resultado de los archivos creados hasta el momento es como lo muestra la imagen:
 
 ![azmlnote2](../images/imgl8.1/img10.png)
 
-Con esta tarea, has preparado y entrenado un modelo de regresión logística que predice si una persona tiene diabetes o no, basado en un conjunto de datos de características. El siguiente paso es desplegar este modelo en un clúster de Azure Kubernetes Service (AKS).
+**¡TAREA FINALIZADA!**
 
-> **¡TAREA FINALIZADA!**
+Con esta tarea, has preparado y entrenado un modelo de regresión logística que predice si una persona tiene diabetes o no, basado en un conjunto de datos de características. El siguiente paso es desplegar este modelo en un clúster de Azure Kubernetes Service (AKS).
 
 ### Tarea 3. Registro y Despliegue del Modelo.
 
-1. Registra el modelo previamente entrenado. Agrega una celda más con este código y ejecútala:
+Paso 1. Registra el modelo previamente entrenado. Agrega una celda más con este código y ejecútala:
 
 ```
 from azureml.core import Workspace
@@ -285,7 +294,7 @@ registered_model = Model.register(workspace=workspace,
 
 ![azmlnote1](../images/imgl8.1/img25.png)
 
-2. Agrega el siguiente código para crear el archivo **score.py** para evaluar los resultados en la implementación:
+Paso 2. Agrega el siguiente código para crear el archivo **score.py** para evaluar los resultados en la implementación:
 
 
 ```
@@ -334,7 +343,7 @@ print('score.py file created.')
 
 ![azmlnote1](../images/imgl8.1/img26.png)
 
-3. En otra celda, agrega este código para importar librerías:
+Paso 3. En otra celda, agrega este código para importar librerías:
 
 ```
 # Importa las librerías necesarias
@@ -349,10 +358,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 ```
 
-> [!NOTE]
-> No hay salida para la carga de librerías.
+**NOTA:** No hay salida para la carga de librerías.
 
-4. Crea un archivo en la raíz de la libreta de Jupyter llamado **`environment.yaml`** y agrega el código siguiente:
+Paso 4. Crea un archivo en la raíz de la libreta **diab-notebook** de Jupyter llamado **`environment.yaml`** y agrega el código siguiente:
 
 ```
 name: diabetes-env
@@ -368,10 +376,9 @@ dependencies:
     - azureml-defaults
 ```
 
-> [!NOTE]
-> Verifica que el archivo aparezca en la raíz de tu carpeta **diab-notebook**.
+**NOTA:** Verifica que el archivo aparezca en la raíz de tu carpeta **diab-notebook**.
 
-5. Crea y registra el entorno con el código:
+Paso 5. Crea y registra el entorno con el código:
 
 ```
 # Conectar con el workspace
@@ -382,11 +389,9 @@ env = Environment.from_conda_specification(name='diabetes-env', file_path='envir
 env.register(workspace)
 ```
 
-> [!NOTE]
-> La salida es un **JSON** grande. Mientras no te dé error, puedes continuar.
+**NOTA:** La salida es un **JSON** grande. Mientras no te dé error, puedes continuar.
 
-
-6. Ahora, en otra celda, coloca el código que iniciará la implementación del modelo:
+Paso 6. Ahora, en otra celda, coloca el código que iniciará la implementación del modelo:
 
 ```
 from azureml.core import Workspace, Model, Environment
@@ -429,12 +434,11 @@ print("Service state:", service.state)
 print("Service URL:", service.scoring_uri)
 ```
 
-> [!NOTE]
-> Recuerda que la implementación puede tardar desde **10 a 25 minutos**. Espera a que la implementación finalice.
+**NOTA:** Recuerda que la implementación puede tardar desde **10 a 25 minutos**. Espera a que la implementación finalice.
 
 ![azmlnote1](../images/imgl8.1/img27.png)
 
-7. Realiza la prueba del modelo implementado con el siguiente código. El resultado será: **No tiene diabetes** **pero puede variar el resultado**.
+Paso 7. Realiza la prueba del modelo implementado con el siguiente código. El resultado será: **No tiene diabetes** **pero puede variar el resultado**.
 
 ```
 import requests
@@ -463,15 +467,15 @@ print('Respuesta del servicio:')
 print(result)
 ```
 
-8. Para obtener el valor de **TU_ENDPOINT_URL**, debes ir a la sección lateral izquierda **ENDPOINTS**.
+Paso 8. Para obtener el valor de **TU_ENDPOINT_URL**, debes ir a la sección lateral izquierda **ENDPOINTS**.
 
 ![azmlnote1](../images/imgl8.1/img28.png)
 
-9. Dentro del servicio, en la **parte inferior**, encontrarás la URL **REST endpoint**. Cópiala y reemplázala en la **línea 5** del código de la prueba.
+Paso 9. Dentro del servicio, en la **parte inferior**, encontrarás la URL **REST endpoint**. Cópiala y reemplázala en la **línea 5** del código de la prueba.
 
 ![azmlnote1](../images/imgl8.1/img29.png)
 
-10. Para esta otra prueba, el resultado será: **Sí tiene diabetes**.
+Paso 10. Para esta otra prueba, el resultado será: **Sí tiene diabetes**.
 
 ```
 import requests
@@ -500,41 +504,44 @@ print('Respuesta del servicio:')
 print(result)
 ```
 
-> [!NOTE]
-> Recuerda cambiar la URL del Endpoint.
+**NOTA:** Recuerda cambiar la URL del Endpoint.
 
-11. ¡Muy bien! Ahora dirígete a la sección **Compute**.
+Paso 11. ¡Muy bien! Ahora dirígete a la sección **Compute**.
 
 ![azmlcompute](../images/imgl8.1/img4.png)
 
-12. Haz clic en el botón **`New`** y selecciona **`AksCompute`**.
+Paso 12. Haz clic en el botón **`New`** y selecciona **`AksCompute`** de la sección **Kubernetes clusters**.
 
-13. Configura los siguientes datos como aparecen en la imagen y haz clic en el botón **`Next`**:
+Paso 13. Configura los siguientes datos como aparecen en la imagen y haz clic en el botón **`Next`**.
 
 **NOTA** El node puede variar dependiendo la demanda y saturación de los recursos, puedes usar alternativamente **DS3**.
 
 ![vsclocal3](../images/imgl8.1/img11.png)
 
-14. En la siguiente página, configura los datos como aparecen en la imagen solo reduce **Number of nodes** a **1** y haz clic en el botón **`Create`**:
+Paso 14. En la siguiente página, configura los datos como aparecen en la imagen y haz clic en el botón **`Create`**.
+
+- Computer name = myakscluster-XX - Sustituye las **X** por letras de tu nombre.
+- **Number of nodes** a **2**
 
 ![vsclocal3](../images/imgl8.1/img12.png)
 
-> [!NOTE]
-> Recuerda que puede tardar desde **10 hasta 25 minutos**. Espera a que la implementación finalice.
+**NOTA:** Recuerda que puede tardar desde **10 hasta 25 minutos**. Espera a que la implementación finalice.
 
-15. Una vez finalizado, verás el resultado exitoso de la creación del clúster de Kubernetes:
+Paso 15. Una vez finalizado, verás el resultado exitoso de la creación del clúster de Kubernetes:
 
 ![vsclocal3](../images/imgl8.1/img13.png)
 
-16. Elimina el **Endpoint** creado que usaste para implementar el modelo en **Azure Container Instance**.
+Paso 16. Elimina el **Endpoint** creado que usaste para implementar el modelo en **Azure Container Instance**.
 
-17. Ve al menú lateral izquierdo y selecciona la opción **`Endpoints`**. Elimínalo como se muestra en la imagen:
+Paso 17. Ve al menú lateral izquierdo y selecciona la opción **`Endpoints`**. Elimínalo como se muestra en la imagen:
 
 ![vsclocal3](../images/imgl8.1/img14.png)
 
-18. Una vez eliminado, ahora pobarás el modelo en el clúster de Kubernetes. Regresa a la libreta de **Jupyter**.
+Paso 18. Una vez eliminado, ahora probarás el modelo en el clúster de Kubernetes. Regresa a la libreta de **Jupyter**.
 
-19. Debajo de la última celda, agrega otra y escribe el siguiente código que implementará el modelo:
+Paso 19. Debajo de la última celda, agrega otra y escribe el siguiente código que implementará el modelo:
+
+**NOTA:** Recuerda sustituir las **X** en la linea **6** con las letras de tu cluster previamente creado.
 
 ```
 from azureml.core.webservice import AksWebservice
@@ -542,7 +549,7 @@ from azureml.core.compute import AksCompute, ComputeTarget
 from azureml.core.compute_target import ComputeTargetException
 
 # Crear o obtener el clúster de AKS
-aks_target = AksCompute(workspace=workspace, name='myakscluster')
+aks_target = AksCompute(workspace=workspace, name='myakscluster-XX')
 
 # Configurar el servicio web para AKS
 aks_config = AksWebservice.deploy_configuration(cpu_cores=1, memory_gb=2)
@@ -558,12 +565,11 @@ service = Model.deploy(workspace=workspace,
 service.wait_for_deployment(show_output=True)
 ```
 
-> [!NOTE]
-> Recuerda que puede tardar de **2 a 5 minutos**. El modelo ya está en caché.
+**NOTA:** Recuerda que puede tardar de **2 a 5 minutos**. El modelo ya está en caché.
 
 ![vsclocal3](../images/imgl8.1/img30.png)
 
-20. Puedes probar el modelo implementado con este código. Sólo debes agregar tu **API_KEY** y la **URL** de tu propio **Endpoint**:
+Paso 20. Puedes probar el modelo implementado con este código. Sólo debes agregar tu **API_KEY** y la **URL** de tu propio **Endpoint**:
 
 ```
 import requests
@@ -599,21 +605,21 @@ except json.JSONDecodeError:
     print("No se pudo decodificar la respuesta como JSON.")
 ```
 
-21. Para obtener tu **API KEY**, debes ir a la opción **Endpoints** y seleccionar el tuyo. Dentro de los detalles del mismo, encontrarás primero la **URL**.
+Paso 21. Para obtener tu **API KEY**, debes ir a la opción **Endpoints** y seleccionar el tuyo. Dentro de los detalles del mismo, encontrarás primero la **URL**.
 
 ![vsclocal5](../images/imgl8.1/img15.png)
 
-22. Después, haz clic en la opción **`Consume`** debajo del nombre de tu endpoint. Ahí encontrarás tu **API KEY**. Cópiala y reemplázala en la celda.
+Paso 22. Después, haz clic en la opción **`Consume`** debajo del nombre de tu endpoint. Ahí encontrarás tu **API KEY**. Cópiala y reemplázala en la celda.
 
 ![vsclocal5](../images/imgl8.1/img16.png)
 
-> **¡TAREA FINALIZADA!**
+**¡TAREA FINALIZADA!**
 
 Has logrado implementar el modelo tanto mediante Azure Container Instances como Azure Kubernetes Service.
 
-> **¡ELIMINAR ENDPOINT!**
+**¡ELIMINAR ENDPOINT!**
 
-1.  Agrega otra celda mas para eliminar el endpoint creado, copia el siguiente contenido a la celda y ejecutala.
+Paso 1.  Agrega otra celda mas para eliminar el endpoint creado, copia el siguiente contenido a la celda y ejecutala.
 
 ```
 from azureml.core import Workspace
@@ -650,9 +656,16 @@ def delete_service_if_exists(service_name, workspace):
 delete_service_if_exists(service_name, ws)
 ```
 
+**¡LABORATORIO FINALIZADO!**
+
 ### Resultado esperado
+
 El resultado final será verificar que ambas implementaciones den los resultados correctos de la predicción.
 
 ![vsclocal3](../images/imgl8.1/img30.png)
 
-> **¡LABORATORIO FINALIZADO!**
+---
+
+**[⬅️ Atrás](/Capítulo7/README_7.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo8/README_8.2.md)**
+
+---

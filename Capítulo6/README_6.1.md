@@ -15,7 +15,13 @@ Realizarás la creación de un Workspace de Azure Machine Learning Studio y se d
 
 ## **Duración aproximada:**
 
-- 120 minutos.
+- 50 minutos.
+
+---
+
+**[⬅️ Atrás](/Capítulo5/lab5.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.2.md)**
+
+---
 
 ## **Prerequisitos:**
 - Tener una cuenta activa en Azure.
@@ -25,7 +31,7 @@ Realizarás la creación de un Workspace de Azure Machine Learning Studio y se d
 
 ### **Tarea 1. Acceso al Portal de Azure.**
 
-> En esta tarea, realiza la autenticación en el portal de Azure.
+En esta tarea, realiza la autenticación en el portal de Azure.
 
 1. Abre tu navegador web favorito (de preferencia **Google Chrome**).
 
@@ -45,54 +51,54 @@ Realizarás la creación de un Workspace de Azure Machine Learning Studio y se d
 
 ![Portal Azure](../images/imgl6.1/img1.png)
 
-> **¡TAREA FINALIZADA!**
+**¡TAREA FINALIZADA!**
+
+Has completado la autenticación a tu cuenta de Azure.
 
 ### **Tarea 2. Creación de Azure Machine Learning Studio.**
 
-> En esta tarea, crea el ambiente de Azure Machine Learning Studio para el entrenamiento e implementación.
+En esta tarea, crea el ambiente de Azure Machine Learning Studio para el entrenamiento e implementación.
 
-1. Ahora, en la parte superior central del portal, haz clic en el buscador y escribe: **`Azure Machine Learning`**.
+Paso 1. Ahora, en la parte superior central del portal, haz clic en el buscador y escribe: **`Azure Machine Learning`**.
 
-2. Selecciona el servicio como lo muestra la imagen siguiente:
+Paso 2. Selecciona el servicio como lo muestra la imagen siguiente:
 
 ![AzureML](../images/imgl6.1/img4.png)
 
-3. Dentro de la **interfaz de Azure Machine Learning**, haz clic en el botón **`+ Create`** y selecciona la opción **`New Workspace`**. Puedes guiarte con la siguiente imagen:
+Paso 3. Dentro de la **interfaz de Azure Machine Learning**, haz clic en el botón **`+ Create`** y selecciona la opción **`New Workspace`**. Puedes guiarte con la siguiente imagen:
 
 ![AzureMLInt](../images/imgl6.1/img5.png)
 
-4. A continuación, realiza la configuración mínima válida para el workspace y laboratorio.
+Paso 4. A continuación, realiza la configuración mínima válida para el workspace y laboratorio.
 
 | Parámetro       | Valores |
 |-----------------|---------|
 | Subscription    | Selecciona la **suscripción** de tu cuenta o la que se asignó para el curso. |
-| Resource Group  | Crea uno nuevo con el nombre **mlrg**. |
-| Name            | **mldata-workspace** |
-| Region          | **East US** |
+| Resource Group  | Crea uno nuevo con el nombre **mlrg-XXXX**. Sustituye las **X** por las iniciales de tu nombre. |
+| Name            | **mldata-workspace-XXXX**. Sustituye las **X** por las iniciales de tu nombre. |
+| Region          | **Asignada en el curso**.  |
 
-> [!IMPORTANT]
-> **El resto de los valores se quedarán por defecto.**
+**IMPORTANTE:** El resto de los valores se quedarán por defecto.
 
 ![AzureMLConfig](../images/imgl6.1/img6.png)
 
-5. Da clic en el botón inferior izquierdo llamado **`Review + create`**. Esto iniciará un proceso de validación de la configuración definida.
+Paso 5. Da clic en el botón inferior izquierdo llamado **`Review + create`**. Esto iniciará un proceso de validación de la configuración definida.
 
-6. Finalmente, haz clic en el botón **`Create`**.
+Paso 6. Finalmente, haz clic en el botón **`Create`**.
 
 ![AzureMLValidation](../images/imgl6.1/img7.png)
 
-> [!NOTE]
-> Aproximadamente, el proceso de creación puede durar de **1:30 a 2 minutos**.
+**NOTA:** Aproximadamente, el proceso de creación puede durar de **1:30 a 2 minutos**.
 
-7. Una vez creado, haz clic en el botón **`Go to resource`**.
+Paso 7. Una vez creado, haz clic en el botón **`Go to resource`**.
 
 ![AzureMLCreado](../images/imgl6.1/img8.png)
 
-8. Dentro de la página principal de **Azure Machine Learning Workspace**, haz clic en el botón **`Launch studio`**.
+Paso 8. Dentro de la página principal de **Azure Machine Learning Workspace**, haz clic en el botón **`Launch studio`**.
 
 ![AzureMLStudio](../images/imgl6.1/img9.png)
 
-9. Ahora estarás dentro de la página principal de **Machine Learning Studio**. Puedes explorar algunas opciones, tales como las de la siguiente tabla:
+Paso 9. Ahora estarás dentro de la página principal de **Machine Learning Studio**. Puedes explorar algunas opciones, tales como las de la siguiente tabla:
 
 ![AzureMLStudioFeatures](../images/imgl6.1/img10.png)
 
@@ -106,77 +112,76 @@ Realizarás la creación de un Workspace de Azure Machine Learning Studio y se d
 | Models          | Para ver y gestionar los modelos que has entrenado. |
 | Endpoints       | Los puntos finales en tiempo real contienen implementaciones que están listas para recibir datos de clientes y pueden enviar respuestas de inmediato. |
 
-> **¡TAREA FINALIZADA!**
+**¡TAREA FINALIZADA!**
+
+Has completado la creación de tu Workspace en Azure Machine Learning.
 
 ### **Tarea 3. Implementación de un modelo de entrenamiento.**
 
-> En esta tarea se entrenará e implementará un modelo para validar que el entorno de **Machine Learning Studio** haya sido creado correctamente.
+En esta tarea se entrenará e implementará un modelo para validar que el entorno de **Machine Learning Studio** haya sido creado correctamente.
 
-1. Dentro de la página principal del Studio de ML, selecciona la libreta de ejemplo llamada **Get Started: Train and deploy a model** y haz clic en el botón **`Start`**.
+Paso 1. Dentro de la página principal del Studio de ML, selecciona la libreta de ejemplo llamada **Get Started: Train and deploy a model** y haz clic en el botón **`Start`**.
 
 ![AzureMLStudioDemo](../images/imgl6.1/img11.png)
 
-2. Una vez abierta la libreta, haz clic en el botón **`Clone this notebook`** para agregarla a tu workspace.
+Paso 2. Una vez abierta la libreta, haz clic en el botón **`Clone this notebook`** para agregarla a tu workspace.
 
 ![AzureMLStudioClonación](../images/imgl6.1/img12.png)
 
-3. Se abrirá una ventana emergente donde confirmarás la clonación dando clic en el botón **`Clone`**.
+Paso 3. Se abrirá una ventana emergente donde confirmarás la clonación dando clic en el botón **`Clone`**.
 
-> [!NOTE]
-> El proceso de clonación puede durar de **30 a 50 segundos** aproximadamente.
+**NOTE:** El proceso de clonación puede durar de **30 a 50 segundos** aproximadamente.
 
-4. Una vez clonado el proyecto, observa en la parte izquierda el árbol de archivos para el entrenamiento.
+Paso 4. Una vez clonado el proyecto, observa en la parte izquierda el árbol de archivos para el entrenamiento.
 
 ![AzureMLStudioNFiles](../images/imgl6.1/img14.png)
 
-5. En la parte central pueder ver el título de la libreta llamada **First look at Azure Machine Learning**.
+Paso 5. En la parte central pueder ver el título de la libreta llamada **First look at Azure Machine Learning**.
 
 ![AzureMLStudioNotebook](../images/imgl6.1/img15.png)
 
-6. A partir de este momento, el **resto del laboratorio** lo realizarás con las **instrucciones de la libreta** en el Estudio de Azure ML.
+Paso 6. A partir de este momento, el **resto del laboratorio** lo realizarás con las **instrucciones de la libreta** en el Estudio de Azure ML.
 
-> [!IMPORTANT]
-> Tips para algunos pasos en la libreta.
+Paso 7. Clic en el simbolo **+** para la creación del ambiente de computo.
 
-7. En la creación de la **Máquina Virtual de Cómputo**, cambia los siguientes valores:
+![AzureMLStudioNotebook](../images/imgl6.1/img18.png)
+
+Paso 8. En la creación de la **Máquina Virtual de Cómputo**, cambia los siguientes valores:
 
 | Parámetro       | Valores |
 |-----------------|---------|
-| Compute Name    | **mlcompute-sXXXX** Cambia las **"X"** por 4 dígitos aleatorios. |
-| Virtual Machine Size | **Standard_DS11_v2** |
+| Compute Name    | **mlcompute-sXXXX** Cambia las **"X"** por las iniciales de tu nombre. |
+| Virtual Machine Size | **Standard_DS11_v2** En caso de no estar disponible se puede seleccionar otra **Standard_DS3_v2**|
 
 ![AzureMLStudioMLCompute](../images/imgl6.1/img16.png)
 
-8. Ahora, da clic en la opción **`Scheduling`** para ajustar el tiempo de inactividad de la Máquina de Cómputo a **15 minutos** y haz clic en el botón **`Review + create`**.
+Paso 9. Ahora, da clic en la opción **`Scheduling`** para ajustar el tiempo de inactividad de la Máquina de Cómputo a **60 minutos** y haz clic en el botón **`Review + create`**.
 
 ![AzureMLStudioMLCompute](../images/imgl6.1/img17.png)
 
-> El resto de las configuraciones se quedarán por defecto.
+**NOTA:** El resto de las configuraciones se quedarán por defecto.
 
-9. Finalmente, haz clic en el botón **`Create`** de la sección **Review**.
+Paso 10. Finalmente, haz clic en el botón **`Create`** de la sección **Review**.
 
-> [!NOTE]
-> El tiempo aproximado de creación es de **2:20 a 2:30 minutos**. Espera a que esté en el estado **Running** antes de continuar.
+**NOTA:** El tiempo aproximado de creación es de **2:20 a 2:30 minutos**. Espera a que esté en el estado **Running** antes de continuar.
 
-> [!IMPORTANT]
-> En la sección **Submit the job**, puede tardar **3 minutos** en iniciar el Job y, en completar, puede tardar **2:50 minutos** aproximadamente.
+**IMPORTANTE:** En la sección **Submit the job**, puede tardar **3 minutos** en iniciar el Job y, en completar, puede tardar **2:50 minutos** aproximadamente.
 
-> [!IMPORTANT]
-> En la sección **Create a new online endpoint** puede tardar un alrededor de **2 minutos** en crear el endpoint.
+**IMPORTANTE:** En la sección **Create a new online endpoint** puede tardar un alrededor de **2 minutos** en crear el endpoint.
 
-> [!WARNING]
-> Si te marca un error **`(SubscriptionNotRegistered) Resource provider [N/A] isn't registered with Subscription [N/A]`** registra el Resource Provider en la suscripción llamado **`Microsoft.Cdn`**
+**ATENCIÓN:** Si te marca un error **`(SubscriptionNotRegistered) Resource provider [N/A] isn't registered with Subscription [N/A]`** registra el Resource Provider en la suscripción llamado **`Microsoft.Cdn`**
 
-> [!IMPORTANT]
-> En la sección **Deploy the model to the endpoint** puede tardar entre **6 a 8 minutos** para realizar la implementación.
+**IMPORTANTE:** En la sección **Deploy the model to the endpoint** puede tardar entre **6 a 8 minutos** para realizar la implementación.
 
-> [!WARNING]
-> En caso de que te marque un error por el tipo de la máquina virtual, puedes cambiar el valor de la **línea 12** y usar este tipo: **Standard_DS1_v2**. Al ser un servidor más pequeño, el tiempo de implementación puede ser de **9:30 a 10 minutos**.
+**IMPORTANTE:** En caso de que te marque un error por el tipo de la máquina virtual, puedes cambiar el valor de la **línea 12** y usar este tipo: **Standard_DS1_v2**. Al ser un servidor más pequeño, el tiempo de implementación puede ser de **9:30 a 10 minutos**.
 
-> [!CAUTION]
-> **No olvides eliminar el endpoint al final de la libreta.**
+**PELIGRO:** No olvides eliminar el endpoint al final de la libreta.**
 
-> **¡TAREA FINALIZADA!**
+**¡TAREA FINALIZADA!**
+
+Has completado de interactuar con la primera libreta en Azure Machine Learning Studio
+
+**¡LABORATORIO FINALIZADO!**
 
 ### Resultado esperado:
 
@@ -184,4 +189,8 @@ El resultado debe ser la ejecución de todas las celdas sin errores.
 
 ![Imagen resultado](../images/imgl6.1/img13.png)
 
-> **¡LABORATORIO FINALIZADO!**
+---
+
+**[⬅️ Atrás](/Capítulo5/lab5.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.2.md)**
+
+---
