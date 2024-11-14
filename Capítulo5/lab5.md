@@ -13,7 +13,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo4/lab4.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_lab6.1.md)**
+**[⬅️ Atrás](/Capítulo4/lab4.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.1.md)**
 
 ---
 
@@ -266,6 +266,6 @@ Al finalizar este laboratorio, habrás aprendido a entrenar y registrar dos vers
 
 ---
 
-**[⬅️ Atrás](/Capítulo4/lab4.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_lab6.1.md)**
+**[⬅️ Atrás](/Capítulo4/lab4.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.1.md)**
 
 ---
