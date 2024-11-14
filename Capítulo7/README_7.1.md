@@ -13,7 +13,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_7.2.md)**
+**[⬅️ Atrás](/Capítulo6/README_6.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.2.md)**
 
 ---
 
@@ -442,6 +442,6 @@ Al finalizar este laboratorio, habrás configurado un pipeline de MLOps en Azure
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_7.2.md)**
+**[⬅️ Atrás](/Capítulo6/README_6.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.2.md)**
 
 ---
