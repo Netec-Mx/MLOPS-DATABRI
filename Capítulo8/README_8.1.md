@@ -93,8 +93,6 @@ Paso 15. Si te pide confirmación, escribe **Y** y espera la configuración.
 
 **NOTA:** Espera un estimado de **5 a 20 minutos** a que termine de habilitar la extensión de Azure Machine Learning.
 
-**NOTA:** 
-
 Paso 16. En la barra de búsqueda del portal, escribe **`Machine Learning`** y selecciona **`Machine Learning`**.
 
 Paso 17. Usa el **Workspace** de Azure Machine Learning **existente** creado en el laboratorio 1. Da clic en **Launch Studio**

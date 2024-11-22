@@ -54,7 +54,7 @@ Paso 7. Espera unos **2.30 minutos** a que el deployment finalice, y luego selec
 
 ![lab1-5](../images/imgl1/img5.png)
 
-**TAREA FINALIZADA** 
+**¡TAREA FINALIZADA!** 
 
 Ahora tienes un workspace de Azure Databricks creado y listo para usar.
 
@@ -90,7 +90,7 @@ Paso 4. Haz clic en **Create compute** y espera a que se active.
 
 ![lab1-10](../images/imgl1/img10.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Ahora tienes un clúster creado y listo para ejecutar tus procesos.
 
@@ -126,7 +126,7 @@ Paso 6. El resultado debe de ser la impresión del texto.
 
 ![lab1-17](../images/imgl1/img17.png)
 
-**TAREA FINALIZADA** 
+**¡TAREA FINALIZADA!** 
 
 Ya estás familiarizado con el entorno de notebooks y has probado ejecutar un comando básico en Python.
 

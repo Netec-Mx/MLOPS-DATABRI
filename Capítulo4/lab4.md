@@ -74,7 +74,7 @@ Paso 14. En la ventana lateral derecha, busca y carga el archivo **productos.csv
 
 ![lab4-13](../images/imgl4/img13.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 El repositorio de Azure DevOps ha sido creado y contiene archivos de ejemplo para el proyecto.
 
@@ -110,7 +110,7 @@ Paso 6. Ahora entra a la carpeta **data** y da clic en los 3 puntos del archivo 
 
 ![lab4-16](../images/imgl4/img16.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Azure Databricks está conectado a tu repositorio de Azure DevOps y listo para trabajar colaborativamente.
 
@@ -216,7 +216,7 @@ df.show(5)
 
 ![lab4-23](../images/imgl4/img23.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 El notebook de procesamiento de datos está listo en Databricks, con el código para cargar, limpiar, y estandarizar precios en dólares.
 

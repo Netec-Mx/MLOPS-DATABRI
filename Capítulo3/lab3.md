@@ -48,7 +48,7 @@ df.createOrReplaceTempView("ventas")
 df.show(5)
 ```
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 El DataFrame se ha registrado como una vista temporal y está listo para consultas SQL.
 
@@ -112,7 +112,7 @@ df_ventas_mensuales.show()
 
 ![lab3-4](../images/imgl3/img4.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Se han ejecutado consultas SQL avanzadas sobre el DataFrame para obtener información detallada y agrupada.
 
@@ -150,7 +150,7 @@ df_ventas_por_mes.show()
 
 ![lab3-6](../images/imgl3/img6.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Se han aplicado transformaciones avanzadas en el DataFrame, incluyendo la creación de columnas, filtrado por percentiles y agrupaciones mensuales.
 

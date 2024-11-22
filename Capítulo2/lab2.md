@@ -82,7 +82,7 @@ data_path = "dbfs:/user/hive/warehouse/ventasejemplo"
 
 Paso 5. Ejecuta la celda. No habra salida.
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Se ha establecido la ruta a la fuente de datos en DBFS.
 
@@ -114,7 +114,7 @@ df.show(5)
 
 ![lab2-8](../images/imgl2/img8.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Los datos se han cargado exitosamente en un DataFrame de PySpark.
 
@@ -149,7 +149,7 @@ df_with_total.show(5)
 
 ![lab2-11](../images/imgl2/img11.png)
 
-**TAREA FINALIZADA**
+**¡TAREA FINALIZADA!**
 
 Se han aplicado transformaciones básicas al DataFrame y los datos están listos para análisis adicionales.
 

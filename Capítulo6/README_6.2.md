@@ -16,7 +16,7 @@ Fases del ciclo de vida de machine learning.
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_7.1.md)**
+**[⬅️ Atrás](/Capítulo6/README_6.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.1.md)**
 
 ---
 
@@ -598,6 +598,6 @@ El resultado esperado es que no haya habido errores en ninguna de las tareas y p
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_7.1.md)**
+**[⬅️ Atrás](/Capítulo6/README_6.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.1.md)**
 
 ---
