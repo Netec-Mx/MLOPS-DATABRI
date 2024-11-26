@@ -1,4 +1,4 @@
-# Laboratorio 7.1. Pipeline de MLOps en Azure DevOps 
+# Laboratorio 9. Pipeline de MLOps en Azure DevOps 
 
 ## Objetivo de la práctica:
 
@@ -13,13 +13,13 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.2.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.2.html)**
 
 ---
 
 ## Instrucciones 
 
-### Tarea 1. Crear un Repositorio en Azure DevOps con Archivos de Configuración Inicial.
+### Tarea 1. Crear un repositorio en Azure DevOps con archivos de configuración inicial.
 
 Configurarás un nuevo repositorio en Azure DevOps para almacenar los scripts de ML y los archivos de configuración necesarios para el pipeline de MLOps.
 
@@ -31,12 +31,12 @@ Paso 2. Dentro del proyecto, ve a **Repos** e inicializa el nuevo repositorio, *
 
 ![lab7.1-2](../images/imgl7.1/img2.png)
 
-Paso 3. Crea el siguiente archivo llamado **`train.py`**. Da clic en los 3 puntos y selecciona la opción **+ New** --> **File**.
+Paso 3. Crea el siguiente archivo llamado **`train.py`**. Da clic en los tres puntos y selecciona la opción **+ New** --> **File**.
 
 ![lab7.1-3](../images/imgl7.1/img3.png)
 ![lab7.1-4](../images/imgl7.1/img4.png)
 
-Paso 4. Ahora agrega el siguiente codigo:
+Paso 4. Ahora, agrega el siguiente código:
 
 ```
 import os
@@ -99,7 +99,7 @@ Paso 5. Da clic en el botón **Commit** y confirma nuevamente **Commit**.
 
 Paso 6. Repite el paso **3** para crear un nuevo archivo llamado **`environment.yml`**.
 
-Paso 7. Agrega el siguiente codigo en el archivo.
+Paso 7. Agrega el siguiente código en el archivo:
 
 ```
 name: mlops-environment:
@@ -121,21 +121,21 @@ Paso 9. Crea una carpeta llamada **`data`** y un archivo llamado **`README.md`**
 
 ![lab7.1-6](../images/imgl7.1/img6.png)
 
-Paso 10. Deja el archivo vacio y solo haz **Commit** 2 veces.
+Paso 10. Deja el archivo vacío y solo haz **Commit** dos veces.
 
-Paso 11. Descarga los datos de la siguiente URL a tu computadora local o maquina virtual. Si ya los tienes avanza al siguiente paso.
+Paso 11. Descarga los datos de la siguiente URL a tu computadora local o máquina virtual. Si ya los tienes, avanza al siguiente paso.
 
 ```
 https://s3.us-west-2.amazonaws.com/labs.netec.com/courses/MLOPS_Databricks/V0.0.1/productos.csv
 ```
 
-Paso 12. Da clic en los 3 puntos de la carpeta creada **data** y selecciona **Upload files**.
+Paso 12. Da clic en los tres puntos de la carpeta creada **data** y selecciona **Upload files**.
 
-Paso 13. En la ventana lateral derecho busca el archivo **productos.csv** descargado y cargalo. Clic en el botón **Commit**
+Paso 13. En la ventana lateral derecho busca el archivo **productos.csv** descargado y cárgalo. Clic en el botón **Commit**.
 
 ![lab7.1-7](../images/imgl7.1/img7.png)
 
-Paso 14. Los archivos cargados quedaran como la siguiente imagen.
+Paso 14. Los archivos cargados quedarán como en la siguiente imagen:
 
 ![lab7.1-8](../images/imgl7.1/img8.png)
 
@@ -143,25 +143,25 @@ Paso 14. Los archivos cargados quedaran como la siguiente imagen.
 
 El repositorio de Azure DevOps ha sido creado y contiene los archivos de configuración iniciales para el pipeline.
 
-### Tarea 2. Configurar el Pipeline en Azure DevOps para Entrenamiento y Registro.
+### Tarea 2. Configurar el Pipeline en Azure DevOps para entrenamiento y registro.
 
 Configurarás un pipeline en Azure DevOps para automatizar el entrenamiento y registro del modelo en Databricks.
 
-Paso 1. En **Azure DevOps**, navega a **Pipeline**s y selecciona **New Pipeline**.
+Paso 1. En **Azure DevOps**, navega a **Pipelines** y selecciona **New Pipeline**.
 
 ![lab7.1-9](../images/imgl7.1/img9.png)
 
 Paso 2. Selecciona **Azure Repos Git** y el repositorio **Pipeline-ML** y configura el pipeline utilizando **Starter pipeline**.
 
-Paso 3. Configura el pipeline para incluir las siguientes etapas
+Paso 3. Configura el pipeline para incluir las siguientes etapas:
 
-- Instalación del Entorno **environment.yml**
-- Entrenamiento del Modelo **train.py**
-- Registro del Modelo **MLflow**
+- Instalación del entorno: **environment.yml**
+- Entrenamiento del modelo: **train.py**
+- Registro del modelo: **MLflow**
 
-Paso 4. Borra todo el contenido del Yaml actual.
+Paso 4. Borra todo el contenido del YAML actual.
 
-Paso 5. Copia y pega el siguiente codigo.
+Paso 5. Copia y pega el siguiente código:
 
 ```
 trigger:
@@ -197,13 +197,13 @@ steps:
     displayName: 'Registrar el Modelo'
 ```
 
-Paso 6. Ahora da clic en el boton **Save and run**
+Paso 6. Ahora da clic en el botón **Save and run**.
 
 ![lab7.1-10](../images/imgl7.1/img10.png)
 
 Paso 7. Nuevamente en la ventana **Save and run**.
 
-Paso 8. Veras el **Job** en ejecución.
+Paso 8. Podrás observar el **Job** en ejecución.
 
 ![lab7.1-11](../images/imgl7.1/img11.png)
 
@@ -219,17 +219,17 @@ Paso 9. Da clic en el nombre para entrar a la consola de los detalles de la ejec
 
 El pipeline de entrenamiento y registro ha sido configurado y ejecutado exitosamente en Azure DevOps.
 
-### Tarea 3: Añadir Etapa de Pruebas para Validación del Modelo
+### Tarea 3. Añadir etapa de pruebas para validación del modelo.
 
 Añadirás una etapa en el pipeline para validar el modelo entrenado mediante pruebas de rendimiento antes de su despliegue.
 
-Paso 1. Regresa a la sección de **Repos** en el menu lateral izquierdo.
+Paso 1. Regresa a la sección de **Repos** en el menú lateral izquierdo.
 
-Paso 2. En la raíz del folder agrega otro archivo llamado **`validate.py`**
+Paso 2. En la raíz del folder agrega otro archivo llamado **`validate.py`**.
 
 ![lab7.1-14](../images/imgl7.1/img14.png)
 
-Paso 3. Dentro del archivo agrega el siguiente codigo que validara el entrenamiento.
+Paso 3. Dentro del archivo agrega el siguiente código que validará el entrenamiento:
 
 ```
 import pandas as pd
@@ -261,11 +261,11 @@ else:
     print("El modelo cumple con los criterios de validación.")
 ```
 
-Paso 4. Clic en el botón **Commit** 2 veces.
+Paso 4. Clic en el botón **Commit** dos veces.
 
-**NOTA:** Eso disparara el pipeline, pero descuida no hay problema.
+**NOTA:** Eso disparará el pipeline, pero descuida, no hay problema.
 
-Paso 5. Muy bien, ahora da clic en la opción **Pipelines** del mení lateral izquierdo.
+Paso 5. Muy bien, ahora da clic en la opción **Pipelines** del menú lateral izquierdo.
 
 Paso 6. Da clic en el nombre del pipeline creado llamado **Pipeline-ML**.
 
@@ -275,7 +275,7 @@ Paso 7. En la parte superior derecha da clic en **Edit**.
 
 ![lab7.1-16](../images/imgl7.1/img16.png)
 
-Paso 8. Al final de la **linea 25** da un salto de linea(Enter) y un retroceso(Borrar un espacio), copia y pega el siguiente bloque de codigo.
+Paso 8. Al final de la **linea 25** da un salto de linea(Enter) y un retroceso(Borrar un espacio), copia y pega el siguiente bloque de código.
 
 **NOTA:** La validación verifica que el modelo cumpla con los criterios de exactitud, como un **RMSE** menor a 10 y un **R2** superior a 0.8.
 
@@ -292,7 +292,7 @@ Paso 8. Al final de la **linea 25** da un salto de linea(Enter) y un retroceso(B
 
 Paso 9. Da clic en el botón superior derecho **Validate and save** despues **Save**
 
-Paso 10. Da clic en el menu lateral izquierdo **Pipelines** luego clic en tu pipeline **Pipeline-ML**, clic en el **Job** en ejecución para ver los detalles de las fases.
+Paso 10. Da clic en el menú lateral izquierdo **Pipelines** luego clic en tu pipeline **Pipeline-ML**, clic en el **Job** en ejecución para ver los detalles de las fases.
 
 ![lab7.1-18](../images/imgl7.1/img18.png)
 
@@ -331,7 +331,7 @@ Paso 5. Clic en el botón **Generate new token** y escribe el nombre **`mlopstok
 
 Paso 6. Guarda el **Token** en tu bloc de notas para usarlo despues.
 
-Paso 7. En el menu lateral izquierdo da clic en **Experiments**.
+Paso 7. En el menú lateral izquierdo da clic en **Experiments**.
 
 ![lab7.1-23](../images/imgl7.1/img23.png)
 
@@ -343,7 +343,7 @@ Paso 9. De vuelta a la pestaña de **Azure DevOps** selecciona **Repos**.
 
 Paso 10. Agrega un nuevo archivo llamado **register_model.py** en la raíz del directorio.
 
-Paso 11. Copia y pega el siguiente codigo al archivo, y ejecuta **Commit** 2 veces para guardar cambios.
+Paso 11. Copia y pega el siguiente código al archivo, y ejecuta **Commit** 2 veces para guardar cambios.
 
 ```
 import mlflow
@@ -394,9 +394,9 @@ Paso 14. Agrega 2 variables y da clic en el botón **Save**.
 
 ![lab7.1-26](../images/imgl7.1/img26.png)
 
-Paso 15. Ahora  edita el codigo de tu pipeline para realizar la conexion a Azure databricks con las variables. Copia y pega el siguiente codigo entre **Validación del modelo** y **Publicación del modelo como artefacto**
+Paso 15. Ahora  edita el código de tu pipeline para realizar la conexion a Azure databricks con las variables. Copia y pega el siguiente código entre **Validación del modelo** y **Publicación del modelo como artefacto**
 
-**NOTA:** Cuidado con la identación. Ajusta el codigo si es necesario.
+**NOTA:** Cuidado con la identación. Ajusta el código si es necesario.
 
 ```
   # Registro del modelo en Databricks
@@ -442,6 +442,6 @@ Al finalizar este laboratorio, habrás configurado un pipeline de MLOps en Azure
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.2.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.2.html)**
 
 ---
