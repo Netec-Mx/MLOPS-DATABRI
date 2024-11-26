@@ -13,25 +13,25 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo2/lab2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo4/lab4.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo2/lab2.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo4/lab4.html)**
 
 ---
 
-## Instrucciones 
+## Instrucciones:
 
-### Tarea 1. Registrar el DataFrame como una Vista Temporal.
+### Tarea 1. Registrar el DataFrame como una vista temporal.
 
 En esta tarea, crearás una vista temporal a partir de un DataFrame para ejecutar consultas SQL directamente sobre los datos.
 
-**NOTA IMPORTANTE:** En caso de haber eliminado o cerrado tu workspace. Repite los siguientes pasos para acceder.
+**NOTA IMPORTANTE:** En caso de haber eliminado o cerrado tu workspace, repite los siguientes pasos para acceder:
 
 Resource Groups ---> dbricks-XXXX-### ---> Azure Databricks Service ---> Lunch Workspace ---> Workspace.
 
-**NOTA:** En caso de haber eliminado el cluster repite la **Tarea 2** del **Laboratorio 1**.
+**NOTA:** En caso de haber eliminado el clúster, repite la **Tarea 2** del **Laboratorio 1**.
 
-Paso 1. En una nueva celda de tu libreta Carga los datos en un DataFrame si aún no lo has hecho. Utiliza la ruta en DBFS.
+Paso 1. En una nueva celda de tu libreta, carga los datos en un DataFrame si aún no lo has hecho. Utiliza la ruta en DBFS.
 
-**NOTA:** Si ya lo tienes cargado avanza al paso 2.
+**NOTA:** Si ya lo tienes cargado, avanza al paso 2.
 
 ```
 data_path = 'dbfs:/user/hive/warehouse/ventasejemplo'
@@ -52,7 +52,7 @@ df.show(5)
 
 El DataFrame se ha registrado como una vista temporal y está listo para consultas SQL.
 
-### Tarea 2. Ejecutar Consultas SQL Avanzadas sobre el DataFrame.
+### Tarea 2. Ejecutar consultas SQL Avanzadas sobre el DataFrame.
 
 En esta tarea, realizarás consultas SQL avanzadas sobre el DataFrame para extraer y analizar patrones complejos en los datos.
 
@@ -96,7 +96,7 @@ df_cliente_mayor_compra.show()
 
 ![lab3-3](../images/imgl3/img3.png)
 
-Paso 3. Genera un informe de ventas mensual que incluya el **mes**, el **total de ventas** y el n**úmero de productos vendidos** en cada mes.
+Paso 3. Genera un informe de ventas mensual que incluya el **mes**, el **total de ventas** y el **número de productos vendidos** en cada mes.
 
 ```
 df_ventas_mensuales = spark.sql("""
@@ -116,7 +116,7 @@ df_ventas_mensuales.show()
 
 Se han ejecutado consultas SQL avanzadas sobre el DataFrame para obtener información detallada y agrupada.
 
-### Tarea 3: Aplicar Transformaciones Avanzadas en el DataFrame
+### Tarea 3. Aplicar transformaciones avanzadas en el DataFrame.
 
 En esta tarea, aplicarás transformaciones avanzadas en el DataFrame para crear columnas derivadas y realizar agrupaciones y filtrados complejos.
 
@@ -156,7 +156,7 @@ Se han aplicado transformaciones avanzadas en el DataFrame, incluyendo la creaci
 
 **¡LABORATORIO FINALIZADO!**
 
-### Resultado esperado
+### Resultado esperado:
 
 Al completar este laboratorio, habrás aprendido a realizar consultas SQL avanzadas y transformaciones complejas en DataFrames, permitiéndote extraer patrones y análisis detallados en Azure Databricks.
 
@@ -164,6 +164,6 @@ Al completar este laboratorio, habrás aprendido a realizar consultas SQL avanza
 
 ---
 
-**[⬅️ Atrás](/Capítulo2/lab2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo4/lab4.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo2/lab2.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo4/lab4.html)**
 
 ---
