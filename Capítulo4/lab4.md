@@ -13,7 +13,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo3/lab3.md)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo3/lab3.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)**
 
 ---
 
@@ -230,6 +230,6 @@ Al finalizar este laboratorio, habrás integrado Azure Databricks con Azure DevO
 
 ---
 
-**[⬅️ Atrás](/Capítulo3/lab3.md)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo3/lab3.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)**
 
 ---
