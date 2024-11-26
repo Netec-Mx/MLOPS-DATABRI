@@ -22,19 +22,19 @@ Al finalizar la práctica, serás capaz de:
 
 En esta tarea, establecerás una conexión a una fuente de datos externa desde Azure Databricks, como una URL pública o una base de datos en Azure.
 
-**NOTA IMPORTANTE:** En caso de haber eliminado o cerrado tu workspace. Repite los siguientes pasos para acceder.
+**NOTA IMPORTANTE:** En caso de haber eliminado o cerrado tu workspace, repite los siguientes pasos para acceder.
 
 Resource Groups ---> dbricks-XXXX-### ---> Azure Databricks Service ---> Lunch Workspace ---> Workspace.
 
-**NOTA:** En caso de haber eliminado el cluster repite la **Tarea 2** del **Laboratorio 1**.
+**NOTA:** En caso de haber eliminado el clúster, repite la **Tarea 2** del **Laboratorio 1**.
 
 Paso 1. Abre tu **notebook** en Azure Databricks y asegúrate de que el clúster está activo.
 
-**NOTA:** Sino realiza el laboratorio 1 para crearlo de nuevo.
+**NOTA:** De lo contrario, realiza el laboratorio 1 para crearlo de nuevo.
 
 Paso 2. Define la fuente de datos usando la URL proporcionada para el archivo `ventasejemplo.csv`.
 
-Paso 3. Abre una pestaña en tu navegador y pega el siguiente link para descargar los datos que se usaran en el laboratorio.
+Paso 3. Abre una pestaña en tu navegador y pega el siguiente enlace para descargar los datos que se utilizarán en el laboratorio.
 
 ```
 https://s3.us-west-2.amazonaws.com/labs.netec.com/courses/BigDataSciencePro/V0.0.1/ventasejemplo.csv
@@ -52,7 +52,7 @@ Paso 4. Da clic en la opcion **New** del menú lateral izquierdo.
 
 ![lab2-2](../images/imgl2/img2.png)
 
-Paso 5. En el menú selecciona **Add or upload data**.
+Paso 5. En el menú, selecciona **Add or upload data**.
 
 ![lab2-3](../images/imgl2/img3.png)
 
@@ -62,7 +62,7 @@ Paso 6. Da clic en la opción **Create or modify table**.
 
 Paso 7. Busca y carga el archivo **ventasejemplo.csv**.
 
-Paso 8. Una vez que cargue da clic en el botón inferior lateral derecho **Create table**.
+Paso 8. Una vez que cargue, da clic en el botón inferior lateral derecho **Create table**.
 
 Paso 9. Selecciona **Workspace** ---> **mlops-notebook** para abrir tu libreta nuevamente.
 
@@ -72,7 +72,7 @@ Paso 10. Agrega una celda nueva en tu libreta.
 
 ![lab2-1](../images/imgl2/img1.png)
 
-Paso 11. En la celda nueva agrega el codigo siguiente para traer los datos.
+Paso 11. En la celda nueva, agrega el siguiente código para traer los datos:
 
 ```
 data_path = "dbfs:/user/hive/warehouse/ventasejemplo"
@@ -80,13 +80,13 @@ data_path = "dbfs:/user/hive/warehouse/ventasejemplo"
 
 ![lab2-5](../images/imgl2/img5.png)
 
-Paso 5. Ejecuta la celda. No habra salida.
+Paso 5. Ejecuta la celda. No habrá salida.
 
 **¡TAREA FINALIZADA!**
 
 Se ha establecido la ruta a la fuente de datos en DBFS.
 
-### Tarea 2. Cargar los Datos en un DataFrame.
+### Tarea 2. Cargar los datos en un DataFrame.
 
 En esta tarea, cargarás los datos en un DataFrame de PySpark para su procesamiento y análisis.
 
@@ -98,7 +98,7 @@ df = spark.read.format("delta").load(data_path)
 
 ![lab2-6](../images/imgl2/img6.png)
 
-Paso 2. Agrega otra celda. Verifica la estructura del DataFrame con el siguiente comando.
+Paso 2. Agrega otra celda. Verifica la estructura del DataFrame con el siguiente comando:
 
 ```
 df.printSchema()
@@ -106,7 +106,7 @@ df.printSchema()
 
 ![lab2-7](../images/imgl2/img7.png)
 
-Paso 3. En otra celda. Visualiza las primeras filas de datos para confirmar la carga correcta.
+Paso 3. En otra celda, visualiza las primeras filas de datos para confirmar la carga correcta.
 
 ```
 df.show(5)
@@ -118,11 +118,11 @@ df.show(5)
 
 Los datos se han cargado exitosamente en un DataFrame de PySpark.
 
-### Tarea 3: Realizar Transformaciones Básicas en el DataFrame
+### Tarea 3: Realizar transformaciones básicas en el DataFrame.
 
 En esta tarea, aplicarás transformaciones al DataFrame, como seleccionar columnas, filtrar filas y agregar una columna nueva.
 
-Paso 1. En otra celda. Selecciona las columnas específicas usando `select`. Por ejemplo, selecciona solo las columnas `nombre_cliente`, `producto` y `cantidad`.
+Paso 1. En otra celda, selecciona las columnas específicas usando `select`. Por ejemplo, selecciona solo las columnas `nombre_cliente`, `producto` y `cantidad`.
 
 ```
 df_selected = df.select("nombre_cliente", "producto", "cantidad")
@@ -155,7 +155,7 @@ Se han aplicado transformaciones básicas al DataFrame y los datos están listos
 
 **¡LABORATORIO FINALIZADO!**
 
-### Resultado esperado
+### Resultado esperado:
 
 Al completar este laboratorio, habrás aprendido a acceder a datos en DBFS, cargar datos en un DataFrame y realizar transformaciones básicas, estableciendo una base sólida para el procesamiento y análisis de datos.
 
@@ -163,6 +163,6 @@ Al completar este laboratorio, habrás aprendido a acceder a datos en DBFS, carg
 
 ---
 
-**[⬅️ Atrás](/Capítulo1/lab1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo3/lab3.md)**
+**[⬅️ Atrás](../Capítulo1/lab1.md)** | **[Lista General](../README.md)** | **[Siguiente ➡️](../Capítulo3/lab3.md)**
 
 ---
