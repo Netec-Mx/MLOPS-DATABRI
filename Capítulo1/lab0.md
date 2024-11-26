@@ -7,6 +7,7 @@ Al finalizar la práctica, serás capaz de:
 - Validar y preparar el ambiente de la organización de Azure DevOps.
 
 ## Duración aproximada:
+
 - 15 minutos.
 
 ---
