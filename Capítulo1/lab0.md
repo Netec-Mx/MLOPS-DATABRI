@@ -12,7 +12,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](../Capítulo1/lab1.md)**
+**[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo1/lab1.html)**
 
 ---
 
@@ -68,6 +68,6 @@ Paso 9. Desactiva el interruptor para **Disable creation of classic build pipeli
  
 ---
 
-**[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](./Capítulo1/lab1.md)**
+**[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo1/lab1.html)**
 
 ---
