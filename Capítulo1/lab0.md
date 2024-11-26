@@ -68,6 +68,6 @@ Paso 9. Desactiva el interruptor para **Disable creation of classic build pipeli
  
 ---
 
-**[Lista General](./README.md)** | **[Siguiente ➡️](./Capítulo1/lab1.md)**
+**[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](./Capítulo1/lab1.md)**
 
 ---
