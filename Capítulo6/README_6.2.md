@@ -1,4 +1,4 @@
-# Laboratorio 6.2. Ciclo de Vida de MLOps.
+# Laboratorio 8. Ciclo de Vida de MLOps
 
 ## Objetivo de la práctica:
 
@@ -7,20 +7,23 @@ Al finalizar la práctica, serás capaz de:
 - Implementar un flujo de trabajo completo de MLOps utilizando Azure Machine Learning y Jupyter Notebooks.
 
 ## Objetivo Visual:
-Fases del ciclo de vida de machine learning.
+
+Fases del ciclo de vida de Machine Learning.
 
 ![diagrama1](../images/imgl6.2/img0.png)
 
 ## Duración aproximada:
+
 - 50 minutos.
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.1.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.1.html)**
 
 ---
 
 ## **Prerrequisitos:**
+
 - Tener una cuenta activa en Azure.
 - Conocimientos básicos en Python y Machine Learning.
 - Familiaridad con Jupyter Notebooks y Azure Portal.
@@ -103,7 +106,7 @@ Paso 5. Ahora, haz clic en la opción **`Files`** y después en **`Create a new 
 
 Paso 6. En la ventana emergente, coloca el nombre **`mlopsdlc-iris`** y haz clic en **`Create`**.
 
-Paso 7. ¡Bien! Una vez que la carpeta ha sido la carpeta creada, pasa el puntero sobre la carpeta y se habilitarán 3 puntos al costado derecho. Haz clic para abrir el menú y selecciona **`Create new file`**.
+Paso 7. ¡Bien! Una vez que la carpeta ha sido la carpeta creada, pasa el puntero sobre la carpeta y se habilitarán tres puntos al costado derecho. Haz clic para abrir el menú y selecciona **`Create new file`**.
 
 ![mlnotebookfile](../images/imgl6.2/img8.png)
 
@@ -113,7 +116,7 @@ Paso 9. Haz clic en el botón **`Create`**.
 
 **NOTA:** Ahora carga el código que recolectará los datos.
 
-Paso 10. En la primera celda de tu libreta de Jupyter, agrega el siguiente código cambia el **connection_string** en la **linea 7** por el valor de tu bloc de notas:
+Paso 10. En la primera celda de tu libreta de Jupyter, agrega el siguiente código cambia el **connection_string** en la **línea 7** por el valor de tu bloc de notas:
 
 ```
 import os
@@ -177,13 +180,13 @@ Paso 11. Para ejecutar la celda, da clic en el botón de **`Play`**.
 
 **IMPORTANTE:** En caso de que el código no corra, asegúrate de tener un ambiente de cómputo, recuerda los pasos del Laboratorio 1.1. para crearlo.
 
-### Resultado esperado.
+### Resultado esperado:
 
 ![mlnotebookfile](../images/imgl6.2/img9.png)
 
 **¡TAREA FINALIZADA!**
 
-Has completado la recolección de datos
+Has completado la recolección de datos.
 
 **FASE 2: RECOLECCIÓN DE DATOS ¡FINALIZADA!**
 
@@ -191,15 +194,15 @@ Has completado la recolección de datos
 
 ### Tarea 1. Definición de código para preprocesar datos.
 
-En esta tarea, procesaras la informacion del dataset iris para el entrenamiento.
+En esta tarea, procesarás la informacion del dataset iris para el entrenamiento.
 
-Paso 1.  Agrega otra celda más para definir el código que preprocesará el archivo `iris.csv`. Pasa el puntero sobre el resultado de la celda anterior y, en el cuadro rojo de la imagen, se habilitará la opción **Code** para agregar una celda de código.
+Paso 1. Agrega otra celda más para definir el código que preprocesará el archivo `iris.csv`. Pasa el puntero sobre el resultado de la celda anterior y, en el cuadro rojo de la imagen, se habilitará la opción **Code** para agregar una celda de código.
 
 ![mlnotebookcode](../images/imgl6.2/img10.png)
 
 ![mlnotebookcode1](../images/imgl6.2/img11.png)
 
-Paso 2.  Agrega el siguiente código para el preprocesamiento:
+Paso 2. Agrega el siguiente código para el preprocesamiento:
 
 ```
 import pandas as pd
@@ -243,15 +246,15 @@ preprocess_data(input_path, output_path)
 
 **NOTA:** El código realizará la obtención de los datos, omitirá la columna de **Species** y dividirá la información en los archivos de entrenamiento.
 
-Paso 3.  Ejecuta la celda con el código.
+Paso 3. Ejecuta la celda con el código.
 
 **NOTA:** El proceso tardará un par de segundos.
 
-Paso 4.  Si todo sale bien, el resultado será como en la siguiente imagen:
+Paso 4. Si todo sale bien, el resultado será como en la siguiente imagen:
 
 ![mlnotebookcode2](../images/imgl6.2/img13.png)
 
-Paso 5.  Adicionalmente, puedes observar en el árbol de directorios y archivos lateral izquierdo una nueva carpeta llamada **preprocessed_data** con el contenido procesado.
+Paso 5. Adicionalmente, puedes observar en el árbol de directorios y archivos lateral izquierdo una nueva carpeta llamada **preprocessed_data** con el contenido procesado.
 
 ![mlnotebookcode2r](../images/imgl6.2/img14.png)
 
@@ -322,13 +325,13 @@ Has completado el entrenamiento del modelo.
 
 ### Tarea 2. Registro del modelo entrenado.
 
-En esta tarea registraras el modelo.
+En esta tarea registrarás el modelo.
 
-Paso 1.  Registra el modelo para su posterior implementación.
+Paso 1. Registra el modelo para su posterior implementación.
 
-Paso 2.  **Agrega una celda** más debajo de la celda que entrenó el modelo.
+Paso 2. **Agrega una celda** más debajo de la celda que entrenó el modelo.
 
-Paso 3.  Copia el siguiente código en la celda creada.
+Paso 3. Copia el siguiente código en la celda creada:
 
 ```
 from azureml.core import Workspace, Model
@@ -352,9 +355,9 @@ print(f"Modelo registrado como 'iris-model' en el espacio de trabajo.")
 
 **NOTA:** Este paso te permitirá guardar el modelo combinando los archivos entrenados, así será más fácil implementarlo en los servidores de cómputo.
 
-Paso 4.  Ejecuta la celda con el código.
+Paso 4. Ejecuta la celda con el código.
 
-Paso 5.  El resultado será como el de la imagen.
+Paso 5. El resultado será como el de la imagen:
 
 ![mlnotebookmodel1](../images/imgl6.2/img17.png)
 
@@ -370,23 +373,23 @@ Has completado el registro del modelo.
 
 ### Tarea 1. Definición del ambiente e implementación del modelo.
 
-Paso 1.  Crea un archivo que definirá las dependencias para la implementación del modelo.
+Paso 1. Crea un archivo que definirá las dependencias para la implementación del modelo.
 
-Paso 2.  Recuerda hacer clic en los tres puntos del directorio **mlopsdls-iris** y seleccionar la opción **`Create new file`**.
+Paso 2. Recuerda hacer clic en los tres puntos del directorio **mlopsdls-iris** y seleccionar la opción **`Create new file`**.
 
-Paso 3.  En la ventana emergente, escribe el nombre del archivo **`environment.yml`** y cambia la extensión a **Tipo Yaml**.
+Paso 3. En la ventana emergente, escribe el nombre del archivo **`environment.yml`** y cambia la extensión a **Tipo Yaml**.
 
 **PELIGRO:** La extensión del nombre del archivo debe ser **yml**, aunque la propiedad **File type** diga **Yaml**.
 
 ![mlnotebookmodel2](../images/imgl6.2/img18.png)
 
-Paso 4.  Haz clic en **`Create`**.
+Paso 4. Haz clic en **`Create`**.
 
-Paso 5.  Verifica la creación del archivo en el directorio.
+Paso 5. Verifica la creación del archivo en el directorio.
 
 ![mlnotebookmodel3](../images/imgl6.2/img19.png)
 
-Paso 6.  Abre el archivo y carga la siguiente configuración que define las dependencias para el modelo a implementar:
+Paso 6. Abre el archivo y carga la siguiente configuración que define las dependencias para el modelo a implementar:
 
 ```
 name: iris-environment
@@ -404,17 +407,17 @@ dependencies:
     - azureml-defaults
 ```
 
-Paso 7.  Da clic en la opción **`Save`**, como lo muestra la imagen.
+Paso 7. Da clic en la opción **`Save`**, como lo muestra la imagen:
 
 ![mlnotebookmodel4](../images/imgl6.2/img20.png)
 
 **NOTA:** Después de guardar el archivo, puedes cerrarlo sin problemas.
 
-Paso 8.  Repite los mismos pasos para crear un archivo de tipo **Python** llamado **`score.py`**.
+Paso 8. Repite los mismos pasos para crear un archivo de tipo **Python** llamado **`score.py`**.
 
 ![mlnotebookmodel5](../images/imgl6.2/img21.png)
 
-Paso 9.  Una vez creado, copia el siguiente código y pégalo en el archivo.
+Paso 9. Una vez creado, copia el siguiente código y pégalo en el archivo:
 
 ```
 import joblib
@@ -446,11 +449,11 @@ def run(raw_data):
 
 **NOTA:** El contenido del archivo es necesario para indicarle a la implementación cómo debe correr el modelo en el servidor.
 
-Paso 10.  Da clic en la opción **`Save`**.
+Paso 10. Da clic en la opción **`Save`**.
 
-Paso 11.  Regresa a tu libreta llamada **irisnotebook.ipynb** y agrega otra celda.
+Paso 11. Regresa a tu libreta llamada **irisnotebook.ipynb** y agrega otra celda.
 
-Paso 12.  En la celda, copia el siguiente código que implementará el modelo:
+Paso 12. En la celda, copia el siguiente código que implementará el modelo:
 
 ```
 from azureml.core import Workspace, Model, Environment
@@ -495,7 +498,7 @@ print(f"Servicio desplegado en ACI: {service.scoring_uri}")
 
 **NOTA:** El despliegue del modelo puede tardar entre **9 a 20 minutos**. Mientras tanto, puedes tomar una taza de café o té.
 
-Paso 13. Una vez terminado, el resultado deberá ser como la imagen.
+Paso 13. Una vez terminado, el resultado deberá ser como la imagen:
 
 ![mlnotebookmodel6](../images/imgl6.2/img22.png)
 
@@ -509,13 +512,13 @@ Has completado la implementación del modelo.
 
 **FASE 5: IMPLEMENTACIÓN DEL MODELO ¡FINALIZADA!**
 
-### **FASE 6: VALIDACIÓN DEL MODELO**
+### **FASE 6: VALIDACIÓN DEL MODELO.**
 
 ### Tarea 1. Validación del modelo.
 
-Paso 1.  ¡Muy bien! Has llegado al momento de la validación del modelo entrenado.
+Paso 1. ¡Muy bien! Has llegado al momento de la validación del modelo entrenado.
 
-Paso 2.  Agrega otra celda debajo del resultado del modelo implementado y copia el siguiente código en ella.
+Paso 2. Agrega otra celda debajo del resultado del modelo implementado y copia el siguiente código en ella:
 
 ```
 import requests
@@ -552,9 +555,9 @@ except Exception as e:
     print(f"Ocurrió un error inesperado: {e}")
 ```
 
-Paso 3.  Dentro de la celda, en la línea **5**, ajusta la variable **scoring_uri** pegando la **URL** de tu bloc de notas. Recuerda que debe estar entre comillas.
+Paso 3. Dentro de la celda, en la línea **5**, ajusta la variable **scoring_uri** pegando la **URL** de tu bloc de notas. Recuerda que debe estar entre comillas.
 
-Paso 4.  Una vez cambiada la URL de inferencia, ejecuta la celda y observa el resultado.
+Paso 4. Una vez cambiada la URL de inferencia, ejecuta la celda y observa el resultado.
 
 ![mlnotebookmodel7](../images/imgl6.2/img23.png)
 
@@ -567,7 +570,7 @@ Paso 4.  Una vez cambiada la URL de inferencia, ejecuta la celda y observa el re
 | petal_length    | Longitud del pétalo (en cm). |
 | petal_width     | Anchura del pétalo (en cm). |
 
-Paso 5.  Ahora, observa el resultado para un iris diferente. Cambia los datos de las líneas **8 a 13** por el siguiente código.
+Paso 5.  Ahora, observa el resultado para un iris diferente. Cambia los datos de las líneas **8 a 13** por el siguiente código:
 
 ```
 data = {
@@ -578,7 +581,7 @@ data = {
 }
 ```
 
-Paso 6.  Ejecuta la celda con el código. El resultado deberá ser como el de la imagen.
+Paso 6.  Ejecuta la celda con el código. El resultado deberá ser como el de la imagen:
 
 ![mlnotebookmodel8](../images/imgl6.2/img24.png)
 
@@ -590,7 +593,7 @@ Has completado la validación del modelo.
 
 **¡LABORATORIO FINALIZADO!**
 
-### Resultado esperado
+### Resultado esperado:
 
 El resultado esperado es que no haya habido errores en ninguna de las tareas y pasos. Debes verificar que el modelo realice las proyecciones correctas, como se muestra en la imagen. Recuerda que cambiando los datos, cambia la proyección.
 
@@ -598,6 +601,6 @@ El resultado esperado es que no haya habido errores en ninguna de las tareas y p
 
 ---
 
-**[⬅️ Atrás](/Capítulo6/README_6.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo7/README_7.1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.1.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.1.html)**
 
 ---
