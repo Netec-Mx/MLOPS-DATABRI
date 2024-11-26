@@ -1,4 +1,4 @@
-# Laboratorio 2. Carga y procesamiento de datos
+# Laboratorio 3. Carga y procesamiento de datos
 
 ## Objetivo de la práctica:
 
@@ -12,11 +12,11 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo1/lab1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo3/lab3.md)**
+**[⬅️ Atrás](../Capítulo1/lab1.md)** | **[Lista General](../README.md)** | **[Siguiente ➡️](../Capítulo3/lab3.md)**
 
 ---
 
-## Instrucciones 
+## Instrucciones:
 
 ### Tarea 1. Conectar a la Fuente de Datos.
 
