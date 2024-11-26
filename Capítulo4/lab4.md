@@ -13,21 +13,21 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo3/lab3.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo5/lab5.md)**
+**[⬅️ Atrás](/Capítulo3/lab3.md)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)**
 
 ---
 
-## Instrucciones 
+## Instrucciones:
 
-### Tarea 1. Crear un Repositorio en Azure DevOps
+### Tarea 1. Crear un repositorio en Azure DevOps.
 
 En esta tarea, crearás un nuevo repositorio en Azure DevOps para almacenar y versionar el código de tu proyecto de machine learning.
 
 Paso 1. Accede a tu organización en [**Azure DevOps**](https://dev.azure.com) y selecciona **+ New project**.
 
-**NOTA:** Debes iniciar sesión con la cuenta que usaste en el **Laboratorio 0**.
+**NOTA:** Debes iniciar sesión con la cuenta que usaste en el **Laboratorio 1**.
 
-Paso 2. Asgina el nombre **`ML-Databricks-XXXX`** Sustituye las **X** por las iniciales de tu nombre.
+Paso 2. Asgina el nombre **`ML-Databricks-XXXX`**. Sustituye las **X** por las iniciales de tu nombre.
 
 ![lab4-1](../images/imgl4/img1.png)
 
@@ -37,24 +37,24 @@ Paso 4. Dentro del proyecto, ve a **Repos** y crea un nuevo repositorio.
 
 ![lab4-2](../images/imgl4/img2.png)
 
-Paso 5. Da clic en **Initialize**
+Paso 5. Da clic en **Initialize**.
 
 ![lab4-3](../images/imgl4/img3.png)
 
-Paso 6. Ahora copia la URL de clonación del repositorio, guardala temporalmente en un bloc de notas.
+Paso 6. Posteriormente, copia la URL de clonación del repositorio y guárdala temporalmente en un bloc de notas.
 
 ![lab4-4](../images/imgl4/img4.png)
 ![lab4-5](../images/imgl4/img5.png)
 
-Paso 7. Da clic en ls 3 puntos del repositorio luego selecciona **New** y **Folder**
+Paso 7. Da clic en los 3 puntos del repositorio, después selecciona **New** y **Folder**.
 
 ![lab4-10](../images/imgl4/img10.png)
 
-Paso 8. En la ventana emergente escribe **`data`** en la opción **New folder name** y **`README.md`**
+Paso 8. En la ventana emergente, escribe **`data`** en la opción **New folder name** y **`README.md`**.
 
 ![lab4-11](../images/imgl4/img11.png)
 
-Paso 9. Clic en el botón **Create**.
+Paso 9. Haz clic en el botón **Create**.
 
 Paso 10. Ahora da clic en el botón lateral derecho **Commit** y en la venatna emergente has clic en **Commit**.
 
@@ -64,7 +64,7 @@ Paso 11. Descarga el siguiente archivo desde la URL, copiala y pegala en una nue
 https://s3.us-west-2.amazonaws.com/labs.netec.com/courses/MLOPS_Databricks/V0.0.1/productos.csv
 ```
 
-Paso 12. Ya descargada, ahora subela a **Azure Repos** da clic en los 3 puntos de la carpeta **data**.
+Paso 12. Una vez descargada, súbela a **Azure Repos**. Da clic en los 3 puntos de la carpeta **data**.
 
 ![lab4-12](../images/imgl4/img12.png)
 
@@ -86,13 +86,13 @@ Configurarás la integración de Azure Databricks con el repositorio de Azure De
 
 Resource Groups ---> dbricks-XXXX-### ---> Azure Databricks Service ---> Lunch Workspace ---> Workspace.
 
-**NOTA:** Inicia la maquina virtual en caso de haberla pausado.
+**NOTA:** Inicia la máquina virtual en caso de haberla pausado.
 
 Paso 1. En Azure Databricks, selecciona **Workspace** en el menú lateral izquierdo.
 
 ![lab4-6](../images/imgl4/img6.png)
 
-Paso 2. Da clic en el botón **Create** lateral derecho y selecciona **Git folder**
+Paso 2. Da clic en el botón **Create** lateral derecho y selecciona **Git folder**.
 
 ![lab4-7](../images/imgl4/img7.png)
 
@@ -102,7 +102,7 @@ Paso 3. Ingresa la URL de tu repositorio de DevOps que copiaste en tu bloc de no
 
 Paso 4. Da clic en el botón **Create Git folder**.
 
-Paso 5. Verifica que los archivos iniciales esten sincronizados.
+Paso 5. Verifica que los archivos iniciales estén sincronizados.
 
 ![lab4-9](../images/imgl4/img9.png)
 
@@ -114,15 +114,15 @@ Paso 6. Ahora entra a la carpeta **data** y da clic en los 3 puntos del archivo 
 
 Azure Databricks está conectado a tu repositorio de Azure DevOps y listo para trabajar colaborativamente.
 
-### Tarea 3: Crear un Notebook de Entrenamiento de Modelo en Databricks
+### Tarea 3. Crear un Notebook de entrenamiento de modelo en Databricks.
 
-En esta tarea, crearás un notebook en Azure Databricks para entrenar un modelo de machine learning utilizando los datos de tu repositorio.
+En esta tarea, crearás un notebook en Azure Databricks para entrenar un modelo de Machine Learning utilizando los datos de tu repositorio.
 
 Paso 1. Da clic en la opción **Home** luego en el botón **Create** lateral derecho, finalmente selecciona **Notebook**.
 
 ![lab4-14](../images/imgl4/img14.png)
 
-Paso 2. Cambia el nombre del nuevo notebook escribe **`Entrenamiento_Modelo`**
+Paso 2. Cambia el nombre del nuevo notebook escribe **`Entrenamiento_Modelo`**.
 
 ![lab4-15](../images/imgl4/img15.png)
 
@@ -133,9 +133,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, regexp_replace, count, when, isnan, round
 ```
 
-**NOTA:** No habra salida.
+**NOTA:** No habrá salida.
 
-Paso 4. Lee el archivo con pandas y luego convertirlo a un DataFrame de Spark. Sustituye la propiedad **TU_FULL_PATH**
+Paso 4. Lee el archivo con pandas y luego conviértelo a un DataFrame de Spark. Sustituye la propiedad **TU_FULL_PATH**.
 
 ```
 import pandas as pd
@@ -148,7 +148,7 @@ df.show(5)
 
 ![lab4-17](../images/imgl4/img17.png)
 
-Paso 5. Copia manualmente el archivo al sistema **dbfs:** para facilitar el acceso con Spark. Escribe el siguiente codigo
+Paso 5. Copia manualmente el archivo al sistema **dbfs:** para facilitar el acceso con Spark. Escribe el siguiente codigo:
 
 ```
 dbutils.fs.cp("file:TU_FULL_PATH", "dbfs:/data/productos.csv")
@@ -158,12 +158,12 @@ dbutils.fs.cp("file:TU_FULL_PATH", "dbfs:/data/productos.csv")
 
 **NOTA:** En general, es una buena práctica almacenar los datos en DBFS (Databricks File System) cuando trabajas en Databricks.
 
-- Acceso Eficiente y Consistente.
-- Persistencia
-- Escalabilidad
-- Mantenimiento y Organización
+- Acceso eficiente y consistente.
+- Persistencia.
+- Escalabilidad.
+- Mantenimiento y organización.
 
-Paso 6. Ahora verifica el acceso correcto a los datos. Escribe el siguiente comando.
+Paso 6. Ahora verifica el acceso correcto a los datos. Escribe el siguiente comando:
 
 ```
 data_path = "dbfs:/data/productos.csv"
@@ -206,7 +206,7 @@ df.show(5)
 
 **NOTA:** Puede haber variaciones en la tasa de cambio.
 
-Paso 10. Por ultimo ajusta los decimales a que solo muestren 2.
+Paso 10. Por último, ajusta los decimales a que solo muestren 2.
 
 ```
 df = df.withColumn("PrecioUsd", round(col("PrecioUsd"), 2))
@@ -222,7 +222,7 @@ El notebook de procesamiento de datos está listo en Databricks, con el código 
 
 **¡LABORATORIO FINALIZADO!**
 
-### Resultado esperado
+### Resultado esperado:
 
 Al finalizar este laboratorio, habrás integrado Azure Databricks con Azure DevOps, colaborado en un proyecto de Machine Learning con control de versiones.
 
@@ -230,6 +230,6 @@ Al finalizar este laboratorio, habrás integrado Azure Databricks con Azure DevO
 
 ---
 
-**[⬅️ Atrás](/Capítulo3/lab3.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo5/lab5.md)**
+**[⬅️ Atrás](/Capítulo3/lab3.md)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)**
 
 ---
