@@ -12,7 +12,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[Lista General](../README.md)** | **[Siguiente ➡️](../Capítulo1/lab1.md)**
+**[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](../Capítulo1/lab1.md)**
 
 ---
 
