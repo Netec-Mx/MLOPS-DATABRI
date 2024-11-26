@@ -1,4 +1,4 @@
-# Laboratorio 3. Consultas y transformaciones en DataFrames
+# Laboratorio 4. Consultas y transformaciones en DataFrames
 
 ## Objetivo de la práctica:
 
