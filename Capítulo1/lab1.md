@@ -1,26 +1,27 @@
-# Laboratorio 1. Configuración inicial en Azure Databricks 
+# Laboratorio 2. Configuración inicial en Azure Databricks 
 
 ## Objetivo de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
-- Crear y configurar un workspace y un clúster en Azure Databricks.
+- Crear y configurar un workspace y un clúster en Azure Databricks.<br>
 - Familiarizarse con el entorno de trabajo en Databricks.
 
 ## Duración aproximada:
+
 - 15 minutos.
 
 ---
 
-**[⬅️ Atrás](/Capítulo9/lab9.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo2/lab2.md)**
+**[⬅️ Atrás](./Capítulo9/lab9.md)** | **[Lista General](./README.md)** | **[Siguiente ➡️](./Capítulo2/lab2.md)**
 
 ---
 
-## Instrucciones 
+## Instrucciones:
 
 ### Tarea 1. Crear un Workspace en Azure Databricks.
 
-En esta tarea, configuraras el entorno base en Azure creando un workspace de Databricks, que será el espacio de trabajo principal donde podrás configurar clústeres, crear notebooks, y ejecutar procesos de datos.
+En esta tarea, podrás configurar el entorno base en Azure creando un workspace de Databricks, que será el espacio de trabajo principal donde podrás configurar clústeres, crear notebooks y ejecutar procesos de datos.
 
 Paso 1. Inicia sesión en el portal de **Azure** en [https://portal.azure.com](https://portal.azure.com).
 
@@ -43,14 +44,15 @@ Paso 5. Configura los siguientes parámetros:
 ![lab1-3](../images/imgl1/img3.png)
 - **Workspace name**: Escribe el nombre **`dbricksspace-XXXX-###`**, repite la sustitución de las **X** y **#** para llevar una consistencia.
 - **Region**: Define la región asignada al inicio del curso.
-- **Pricing Tier**: Selecciona el nivel de precios **Standard (Apache Spark, Secure with Microsoft Entra ID)**
+- **Pricing Tier**: Selecciona el nivel de precios **Standard (Apache Spark, Secure with Microsoft Entra ID)**.
+  
 ![lab1-4](../images/imgl1/img4.png)
 
 **NOTA:** El resto de los valores se quedan por defecto.
 
 Paso 6. Haz clic en **Review + create** y luego en **Create** para desplegar el workspace. 
 
-Paso 7. Espera unos **2.30 minutos** a que el deployment finalice, y luego selecciona **Go to Resource** para abrir tu nuevo workspace.
+Paso 7. Espera unos **2:30 minutos** a que el deployment finalice, y luego selecciona **Go to Resource** para abrir tu nuevo workspace.
 
 ![lab1-5](../images/imgl1/img5.png)
 
@@ -58,21 +60,22 @@ Paso 7. Espera unos **2.30 minutos** a que el deployment finalice, y luego selec
 
 Ahora tienes un workspace de Azure Databricks creado y listo para usar.
 
-### Tarea 2. Crear un Clúster en Azure Databricks.
+### Tarea 2. Crear un clúster en Azure Databricks.
 
 Con el workspace creado, el siguiente paso es configurar un clúster, el cual te proporcionará los recursos computacionales necesarios para ejecutar operaciones y procesar datos.
 
-Paso 1. En la pagina del servicio de Databricks en Azure, da clic en **Launch Workspace**
+Paso 1. En la página del servicio de Databricks en Azure, da clic en **Launch Workspace**.
 
 ![lab1-6](../images/imgl1/img6.png)
 
-Paso 2. Dentro del workspace** recién creado**, selecciona **Compute** en el menú lateral izquierdo.
+Paso 2. Dentro del workspace **recién creado**, selecciona **Compute** en el menú lateral izquierdo.
 
 Paso 3. Haz clic en **Create compute** y configura los siguientes parámetros:
 
 - **Nombre del clúster**: **`dbcluster-XXXX-###`**, sutituye las **X** y los **#** respectivamente.
 
 ![lab1-7](../images/imgl1/img7.png)
+
 - **Cluster Mode**: Selecciona **Single node**.
 
 ![lab1-8](../images/imgl1/img8.png)
@@ -80,6 +83,7 @@ Paso 3. Haz clic en **Create compute** y configura los siguientes parámetros:
 - **Node type**: Selecciona el servidor **Standard_D4s_v3**.
 
 ![lab1-11](../images/imgl1/img11.png)
+
 - **Terminate after**: Desmarca la casilla
 
 ![lab1-9](../images/imgl1/img9.png)
@@ -94,7 +98,7 @@ Paso 4. Haz clic en **Create compute** y espera a que se active.
 
 Ahora tienes un clúster creado y listo para ejecutar tus procesos.
 
-### Tarea 3: Familiarizarse con el Entorno de Notebooks
+### Tarea 3. Familiarizarse con el entorno de Notebooks.
 
 En esta tarea, explorarás el entorno de notebooks de Databricks. Los notebooks son espacios colaborativos ideales para trabajar con código, realizar pruebas y visualizar datos.
 
@@ -110,7 +114,7 @@ Paso 3. Nombra el notebook como **`mlops-notebook`** y selecciona **Python** com
 
 ![lab1-14](../images/imgl1/img14.png)
 
-Paso 4. Conéctalo al clúster (tu cluster previamente creado).
+Paso 4. Conéctalo al clúster (el que creaste previamente).
 
 ![lab1-15](../images/imgl1/img15.png)
 
@@ -132,7 +136,7 @@ Ya estás familiarizado con el entorno de notebooks y has probado ejecutar un co
 
 **¡LABORATORIO FINALIZADO!**
 
-### Resultado esperado
+### Resultado esperado:
 
 Creamos un workspace en Azure Databricks como entorno base, configuramos un clúster para ejecutar análisis y procesar datos, y exploramos el entorno de notebooks, realizando una prueba básica en Python para verificar el funcionamiento.
 
