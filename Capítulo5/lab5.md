@@ -1,10 +1,10 @@
-# Laboratorio 5. Entrenamiento y evaluación de modelos 
+# Laboratorio 6. Entrenamiento y evaluación de modelos 
 
 ## Objetivo de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
-- Entrenar y registrar dos versiones de un modelo de machine learning utilizando datos de ventas.
+- Entrenar y registrar dos versiones de un modelo de Machine Learning utilizando datos de ventas.
 - Evaluar y comparar el rendimiento de ambas versiones con métricas de regresión.
 - Guardar los modelos y los resultados para análisis y comparación.
 
@@ -13,17 +13,17 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo4/lab4.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo4/lab4.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.1.html)**
 
 ---
 
 ## Instrucciones 
 
-### Tarea 1. Preparar el Dataset para el Entrenamiento
+### Tarea 1. Preparar el Dataset para el entrenamiento.
 
-Configurarás un pipeline de machine learning para entrenar un modelo de regresión que prediga el beneficio neto en función del precio en dólares y las unidades vendidas.
+Configurarás un pipeline de Machine Learning para entrenar un modelo de regresión que prediga el beneficio neto en función del precio en dólares y las unidades vendidas.
 
-**NOTA:** Esta práctica es continuación del **Laboratorio 4** usaras la misma libreta. 
+**NOTA:** Esta práctica es continuación del **Laboratorio 5**, por lo que usarás la misma libreta. 
 
 Paso 1. Asegurate de estar en la libreta **Entrenamiento_Modelo** al final de todas las celdas agrega una nueva.
 
@@ -45,9 +45,9 @@ df_ml.show(5)
 
 El dataset está listo para el entrenamiento de los modelos con las columnas seleccionadas y limpiadas.
 
-### Tarea 2. Entrenar y Registrar la Primera Versión del Modelo
+### Tarea 2. Entrenar y registrar la primera versión del modelo.
 
-En esta tarea, configuraras un experimento en Databricks MLflow y entrenaras la primera versión del modelo, registrando las métricas y parámetros.
+En esta tarea, configurarás un experimento en Databricks MLflow y entrenarás la primera versión del modelo, registrando las métricas y parámetros.
 
 Paso 1. Entrenarás la primera versión del modelo y registrarás sus métricas para comparaciones futuras.
 
@@ -87,21 +87,21 @@ with mlflow.start_run(run_name="Modelo_V1"):
 
 ![lab5-4](../images/imgl5/img4.png)
 
-**NOTA:** El proceso tardara unos segundos.
+**NOTA:** El proceso tarda unos segundos.
 
-**IMPORTANTE:** Recuerda que tambien puedes verificar el experimento en la interfaz grafica de Databricks. Seleccionando **Experiments** en el menu lateral izquierdo.
+**IMPORTANTE:** Recuerda que también puedes verificar el experimento en la interfaz grafica de Databricks. Seleccionando **Experiments** en el menú lateral izquierdo.
 
 **¡TAREA FINALIZADA!**
 
 La primera versión del modelo ha sido entrenada y registrada como un experimento en Databricks MLflow.
 
-### Tarea 3: Entrenar y Registrar la Segunda Versión del Modelo con Parámetros Diferentes.
+### Tarea 3. Entrenar y registrar la segunda versión del modelo con parámetros diferentes.
 
 Entrenarás una segunda versión del modelo ajustando parámetros adicionales y registrarás sus métricas para comparación en el mismo experimento.
 
 Paso 1. Entrena la segunda versión del modelo dentro del contexto de MLflow y ajusta el parámetro `regParam` para aplicar regularización.
 
-**NOTA:** Al establecer regParam=0.1, se incorpora una regularización ligera. Basado en **L2 regularización (Ridge)** o **L1 regularización (Lasso)**
+**NOTA:** Al establecer regParam=0.1, se incorpora una regularización ligera. Basado en **L2 regularización (Ridge)** o **L1 regularización (Lasso)**.
 
 ```
 with mlflow.start_run(run_name="Modelo_V2"):
@@ -124,7 +124,7 @@ with mlflow.start_run(run_name="Modelo_V2"):
 
 La segunda versión del modelo ha sido entrenada con regularización y registrada en MLflow para comparación en el mismo experimento.
 
-### Tarea 4: Comparar las Métricas de las Versiones del Modelo en Experiments
+### Tarea 4. Comparar las métricas de las versiones del modelo en experiments.
 
 En esta tarea, utilizarás la interfaz de Databricks Experiments para visualizar y comparar las métricas de ambas versiones del modelo.
 
@@ -136,23 +136,23 @@ Paso 2. Dentro del experimento llamado **Entrenamiento_Modelo**, compara las mé
 
 ![lab5-7](../images/imgl5/img7.png)
 
-Paso 3. Selecciona los 2 modelos creados y da clic en el botón **Compare**
+Paso 3. Selecciona los dos modelos creados y da clic en el botón **Compare**.
 
 ![lab5-8](../images/imgl5/img8.png)
 
-Paso 4. Compara las estadisticas de ambos modelos.
+Paso 4. Compara las estadísticas de ambos modelos.
 
 - **R2:** Un R² más cercano a 1 indica un mejor ajuste del modelo. Sin embargo, un valor bajo de R² no siempre significa que el modelo sea malo, especialmente en problemas complejos.
 
-- **RMSE:**  Valores más bajos indican un mejor ajuste, ya que implican menor cantidad de errores.
+- **RMSE:** Valores más bajos indican un mejor ajuste, ya que implican menor cantidad de errores.
 
 ![lab5-9](../images/imgl5/img9.png)
 
-Paso 5. Puedes tambien dar clic en el nombre de la metrica **R2** por ejemplo y ver las estadisticas en una grafica.
+Paso 5. También puedes dar clic en el nombre de la métrica **R2**, por ejemplo, y ver las estadísticas en una gráfica.
 
 ![lab5-10](../images/imgl5/img10.png)
 
-Paso 6. Repite el paso 5 y visualiza la metrica **RMSE**.
+Paso 6. Repite el paso 5 y visualiza la métrica **RMSE**.
 
 ![lab5-11](../images/imgl5/img11.png)
 
@@ -160,7 +160,7 @@ Paso 6. Repite el paso 5 y visualiza la metrica **RMSE**.
 
 Las métricas de ambas versiones del modelo han sido comparadas usando la interfaz de Experiments de Databricks.
 
-### Tarea 5: Registrar y Versionar los Modelos en Databricks Models
+### Tarea 5. Registrar y versionar los modelos en Databricks Models.
 
 En esta tarea, registrarás las dos versiones del modelo en la sección de **Models** de Databricks para su almacenamiento, versionamiento y futura implementación.
 
@@ -168,7 +168,7 @@ Paso 1. Dirígete a la sección de **Models** en Databricks.
 
 ![lab5-12](../images/imgl5/img12.png)
 
-Paso 2. Da clic en el botón **Create a model**  y crea un nuevo registro de modelo llamado `Modelo_Prediccion_Beneficio`.
+Paso 2. Da clic en el botón **Create a model** y crea un nuevo registro de modelo llamado `Modelo_Prediccion_Beneficio`.
 
 ![lab5-13](../images/imgl5/img13.png)
 ![lab5-14](../images/imgl5/img14.png)
@@ -184,7 +184,7 @@ Paso 5. Regresa a tu libreta busca la celda de la ejecución del primer modelo *
 
 ![lab5-15](../images/imgl5/img15.png)
 
-Paso 6. Agrega una nueva celda hasta el final. Copia y pega el siguiente codigo para registrar el modelo. Sustituye el valor de **TU_RUN_ID**
+Paso 6. Agrega una nueva celda hasta el final. Copia y pega el siguiente código para registrar el modelo. Sustituye el valor de **TU_RUN_ID**
 
 ```
 import mlflow
@@ -203,11 +203,11 @@ print(f"Modelo registrado en el Model Registry con el nombre: {model_registry_na
 
 ![lab5-16](../images/imgl5/img16.png)
 
-Paso 7. Repite el paso 5 pero ahora busca la celda que contiene **Modelo_v2**.
+Paso 7. Repite el paso 5, pero ahora busca la celda que contiene **Modelo_v2**.
 
 ![lab5-17](../images/imgl5/img17.png)
 
-Paso 8. Repite el paso 6. Copia y pega el codigo para registrar el segundo modelo. Sustituye el valor de **TU_RUN_ID** (Modelo 2)
+Paso 8. Repite el paso 6. Copia y pega el código para registrar el segundo modelo. Sustituye el valor de **TU_RUN_ID** (Modelo 2)
 
 ```
 import mlflow
@@ -226,11 +226,11 @@ print(f"Modelo registrado en el Model Registry con el nombre: {model_registry_na
 
 ![lab5-18](../images/imgl5/img18.png)
 
-Paso 9. Regresa a la sección de **Models** da clic en el modelo creado previamente **Modelo_Predicción_Beneficio** y revisa que esten las 2 versiones.
+Paso 9. Regresa a la sección de **Models**, da clic en el modelo creado previamente **Modelo_Predicción_Beneficio** y revisa que estén las dos versiones.
 
 ![lab5-19](../images/imgl5/img19.png)
 
-Paso 10. Por ultimo, de vuelta a tu libreta, agrega una celda mas hasta el final. Agrega el siguiente codigo. Se visualizaran graficas con la libreria **Matplotlib**
+Paso 10. Por último, de vuelta a tu libreta, agrega una celda mas hasta el final. Agrega el siguiente código; se visualizarán gráficas con la librería **Matplotlib**.
 
 ```
 import matplotlib.pyplot as plt
@@ -258,14 +258,14 @@ Ambas versiones del modelo han sido registradas y versionadas en Databricks Mode
 
 **¡LABORATORIO FINALIZADO!**
 
-### Resultado esperado
+### Resultado esperado:
 
-Al finalizar este laboratorio, habrás aprendido a entrenar y registrar dos versiones de un modelo de machine learning utilizando MLflow en Databricks, comparar el rendimiento en Experiments, y versionar los modelos en Models para su almacenamiento y uso futuro.
+Al finalizar este laboratorio, habrás aprendido a entrenar y registrar dos versiones de un modelo de Machine Learning utilizando MLflow en Databricks, comparar el rendimiento en Experiments y versionar los modelos en Models para su almacenamiento y uso futuro.
 
 ![lab5-20](../images/imgl5/img20.png)
 
 ---
 
-**[⬅️ Atrás](/Capítulo4/lab4.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo4/lab4.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.1.html)**
 
 ---
