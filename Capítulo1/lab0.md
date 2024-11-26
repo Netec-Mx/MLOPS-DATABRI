@@ -1,36 +1,37 @@
-# Laboratorio 0. Preparación del ambiente de Azure DevOps
+# Laboratorio 1. Preparación del ambiente de Azure DevOps
 
 ## Objetivo de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
-- Validar y preparar el ambiente de la organización de Azure DevOps
+- Validar y preparar el ambiente de la organización de Azure DevOps.
 
 ## Duración aproximada:
 - 15 minutos.
 
 ---
 
-**[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo1/lab1.md)**
+**[Lista General](./README.md)** | **[Siguiente ➡️](./Capítulo1/lab1.md)**
 
 ---
 
-## Prerequisitos:
+## Prerrequisitos:
+
 - Tener una cuenta activa en Azure.
 
-## **Instrucciones:**
+## Instrucciones:
 
 ### Tarea 1. Configuración del Proyecto en Azure DevOps.
 
-Paso 1. Inicia sesión en **[Azure DevOps](https://dev.azure.com/)**
+Paso 1. Inicia sesión en **[Azure DevOps](https://dev.azure.com/)**.
 
-Paso 2. Clic en el botón **`Start free`**.
+Paso 2. Da clic en el botón **`Start free`**.
 
 ![azuredevops1](../images/imgl0/img0.png)
 
 Paso 3. Autentícate con la cuenta de **Azure/Microsoft** otorgada en clase.
 
-**NOTA:** Si es la primera vez que usas tu cuenta continúa con los pasos de autenticación y creación de la organización de **Azure DevOps**.
+**NOTA:** Si es la primera vez que usas tu cuenta, continúa con los pasos de autenticación y creación de la organización de **Azure DevOps**.
 
 Paso 4. Una vez que la nueva organización se abra en Azure DevOps, haz clic en **`Organization Settings`** en la esquina inferior izquierda.
 
@@ -60,12 +61,12 @@ Paso 9. Desactiva el interruptor para **Disable creation of classic build pipeli
 
 **NOTA:** No es necesario guardar.
 
-**IMPORTANTE:** Espera al menos **3 horas** antes de utilizar las capacidades de CI/CD para que los nuevos ajustes se reflejen en el backend. De lo contrario, seguirás viendo el mensaje **"No se ha adquirido ni concedido paralelismo alojado"**.
+**IMPORTANTE:** Espera al menos **3 horas** antes de utilizar las capacidades de CI/CD para que los nuevos ajustes se reflejen en el backend; de lo contrario, seguirás viendo el mensaje **"No se ha adquirido ni concedido paralelismo alojado"**.
 
 **¡LABORATORIO FINALIZADO!**
  
 ---
 
-**[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo1/lab1.md)**
+**[Lista General](./README.md)** | **[Siguiente ➡️](./Capítulo1/lab1.md)**
 
 ---
