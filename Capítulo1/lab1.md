@@ -13,7 +13,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](../Capítulo9/lab9.md)** | **[Lista General](../README.md)** | **[Siguiente ➡️](../Capítulo2/lab2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo1/lab0.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo2/lab2.html)**
 
 ---
 
@@ -144,6 +144,6 @@ Creamos un workspace en Azure Databricks como entorno base, configuramos un clú
 
 ---
 
-**[⬅️ Atrás](/Capítulo9/lab9.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo2/lab2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo1/lab0.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo2/lab2.html)**
 
 ---
