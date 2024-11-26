@@ -1,6 +1,6 @@
-# **Laboratorio 6.1. Configuración del entorno de desarrollo en Azure.**
+# Laboratorio 7. Configuración del entorno de desarrollo en Azure
 
-## **Objetivo de la práctica:**
+## Objetivo de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
@@ -19,17 +19,18 @@ Realizarás la creación de un Workspace de Azure Machine Learning Studio y se d
 
 ---
 
-**[⬅️ Atrás](/Capítulo5/lab5.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.2.html)**
 
 ---
 
-## **Prerequisitos:**
+## Prerrequisitos:
+
 - Tener una cuenta activa en Azure.
 - Acceso a Azure Machine Learning Studio (puedes obtener una prueba gratuita si es necesario).
 
-## **Instrucciones:**
+## Instrucciones:
 
-### **Tarea 1. Acceso al Portal de Azure.**
+### **Tarea 1. Acceso al portal de Azure.**
 
 En esta tarea, realiza la autenticación en el portal de Azure.
 
@@ -37,7 +38,7 @@ En esta tarea, realiza la autenticación en el portal de Azure.
 
 2. Navega a la página principal de Azure Portal: [Azure Portal](https://portal.azure.com/).
 
-3. Si ya tienes una cuenta de Azure, ingresa tu **dirección de correo electrónico y contraseña asociada** a tu cuenta.
+3. Si ya tienes una cuenta de Azure, ingresa tu **dirección de correo electrónico y contraseña asociada**.
 
 ![Iniciar sesión](../images/imgl6.1/img2.png)
 
@@ -65,7 +66,7 @@ Paso 2. Selecciona el servicio como lo muestra la imagen siguiente:
 
 ![AzureML](../images/imgl6.1/img4.png)
 
-Paso 3. Dentro de la **interfaz de Azure Machine Learning**, haz clic en el botón **`+ Create`** y selecciona la opción **`New Workspace`**. Puedes guiarte con la siguiente imagen:
+Paso 3. Dentro de la **interfaz de Azure Machine Learning**, haz clic en el botón **`+ Create`** y selecciona la opción **`New Workspace`**. Puedes guiarte de la siguiente imagen:
 
 ![AzureMLInt](../images/imgl6.1/img5.png)
 
@@ -142,7 +143,7 @@ Paso 5. En la parte central pueder ver el título de la libreta llamada **First 
 
 Paso 6. A partir de este momento, el **resto del laboratorio** lo realizarás con las **instrucciones de la libreta** en el Estudio de Azure ML.
 
-Paso 7. Clic en el simbolo **+** para la creación del ambiente de computo.
+Paso 7. Clic en el símbolo **+** para la creación del ambiente de computo.
 
 ![AzureMLStudioNotebook](../images/imgl6.1/img18.png)
 
@@ -169,17 +170,17 @@ Paso 10. Finalmente, haz clic en el botón **`Create`** de la sección **Review*
 
 **IMPORTANTE:** En la sección **Create a new online endpoint** puede tardar un alrededor de **2 minutos** en crear el endpoint.
 
-**ATENCIÓN:** Si te marca un error **`(SubscriptionNotRegistered) Resource provider [N/A] isn't registered with Subscription [N/A]`** registra el Resource Provider en la suscripción llamado **`Microsoft.Cdn`**
+**ATENCIÓN:** Si te marca un error **`(SubscriptionNotRegistered) Resource provider [N/A] isn't registered with Subscription [N/A]`**, registra el Resource Provider en la suscripción llamado **`Microsoft.Cdn`**.
 
 **IMPORTANTE:** En la sección **Deploy the model to the endpoint** puede tardar entre **6 a 8 minutos** para realizar la implementación.
 
 **IMPORTANTE:** En caso de que te marque un error por el tipo de la máquina virtual, puedes cambiar el valor de la **línea 12** y usar este tipo: **Standard_DS1_v2**. Al ser un servidor más pequeño, el tiempo de implementación puede ser de **9:30 a 10 minutos**.
 
-**PELIGRO:** No olvides eliminar el endpoint al final de la libreta.**
+**PELIGRO:** No olvides eliminar el endpoint al final de la libreta.
 
 **¡TAREA FINALIZADA!**
 
-Has completado de interactuar con la primera libreta en Azure Machine Learning Studio
+Has completado de interactuar con la primera libreta en Azure Machine Learning Studio.
 
 **¡LABORATORIO FINALIZADO!**
 
@@ -191,6 +192,6 @@ El resultado debe ser la ejecución de todas las celdas sin errores.
 
 ---
 
-**[⬅️ Atrás](/Capítulo5/lab5.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo6/README_6.2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo5/lab5.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo6/README_6.2.html)**
 
 ---
