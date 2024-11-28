@@ -1,4 +1,4 @@
-# Laboratorio 8.1. Despliegue de Servicio de Cómputo
+# Laboratorio 11. Despliegue de servicio de cómputo.
 
 ## Objetivo de la práctica:
 
@@ -18,7 +18,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo7/README_7.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo8/README_8.2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.2.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.2.html)**
 
 ---
 
@@ -30,7 +30,7 @@ Al finalizar la práctica, serás capaz de:
 
 ## Instrucciones:
 
-### Tarea 1. Preparación del Entorno.
+### Tarea 1. Preparación del entorno.
 
 En esta tarea, prepara todo lo necesario para entrenar y desplegar el modelo, incluyendo el uso del Workspace en Azure Machine Learning, la configuración del entorno de trabajo y la carga del conjunto de datos.
 
@@ -89,13 +89,13 @@ az k8s-extension create --name azureml --extension-type Microsoft.AzureML.Kubern
 
 Paso 15. Si te pide confirmación, escribe **Y** y espera la configuración.
 
-**NOTA:** Estos pasos son demostrativos para la creación del cluster.
+**NOTA:** Estos pasos son demostrativos para la creación del clúster.
 
 **NOTA:** Espera un estimado de **5 a 20 minutos** a que termine de habilitar la extensión de Azure Machine Learning.
 
-Paso 16. En la barra de búsqueda del portal, escribe **`Machine Learning`** y selecciona **`Machine Learning`**.
+Paso 16. En la barra de búsqueda del portal, escribe **`Machine Learning`** y selecciónalo.
 
-Paso 17. Usa el **Workspace** de Azure Machine Learning **existente** creado en el laboratorio 1. Da clic en **Launch Studio**
+Paso 17. Usa el **Workspace** de Azure Machine Learning **existente** creado en el laboratorio 1. Da clic en **Launch Studio**.
 
 Paso 18. Una vez abierto el Workspace, selecciona del menú lateral izquierdo **`Compute`**.
 
@@ -105,7 +105,7 @@ Paso 19. Selecciona la opción **Kubernetes clusters** y después el botón **`N
 
 ![azmlcompute1](../images/imgl8.1/img5.png)
 
-Paso 20. En la ventana emergente lateral derecha, configura las propiedades como aparece en la imagen. Escribe el nombre **kubemlcompute-XX** cambia las **X** por las iniciales de tu nombre
+Paso 20. En la ventana emergente lateral derecha, configura las propiedades como aparece en la imagen. Escribe el nombre **kubemlcompute-XX** cambia las **X** por las iniciales de tu nombre.
 
 ![azmlcompute2](../images/imgl8.1/img6.png)
 
@@ -119,7 +119,7 @@ Paso 22. Finalmente, podrás observar el clúster correctamente asociado.
 
 Con esta tarea, has experimentado cómo crear un clúster de Azure Kubernetes Service y cómo asociarlo al Workspace de Azure Machine Learning. **Para el entrenamiento, usaremos otro clúster de tipo Kubernetes. Esta tarea fue demostrativa.**
 
-### Tarea 2. Preparación y Entrenamiento del Modelo.
+### Tarea 2. Preparación y entrenamiento del modelo.
 
 En esta tarea, configurarás todas las celdas necesarias para la preparación de los datos y el entrenamiento adecuado del modelo.
 
@@ -664,6 +664,6 @@ El resultado final será verificar que ambas implementaciones den los resultados
 
 ---
 
-**[⬅️ Atrás](/Capítulo7/README_7.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo8/README_8.2.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.2.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.2.html)**
 
 ---
