@@ -1,4 +1,4 @@
-# Laboratorio 9. Creación de reportes y visualización de datos en Power BI.
+# Laboratorio 13. Creación de reportes y visualización de datos en Power BI
 
 ## Objetivo de la práctica:
 
@@ -8,7 +8,7 @@ Al finalizar la práctica, serás capaz de:
 - Integrar y visualizar datos de Azure Application Insights relacionados con el uso del modelo.
 - Configurar un dashboard en Power BI para monitorizar el estado y las métricas del modelo.
 
-## Objetivo Visual:
+## Objetivo visual:
 
 ![diagrama1](../images/imgl9/img0.png)
 
@@ -17,7 +17,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo8/README_8.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo1/lab1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)**
 
 ---
 
@@ -543,6 +543,6 @@ El resultado esperado del laboratorio finalmente es ver las gráficas con la inf
 
 ---
 
-**[⬅️ Atrás](/Capítulo8/README_8.2.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo1/lab1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)**
 
 ---
