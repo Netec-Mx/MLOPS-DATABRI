@@ -58,7 +58,7 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
    - **Descripción**: Implementación, monitoreo continuo y evaluación de modelos para asegurar su rendimiento y precisión en producción
    - ⏱️ **Duración estimada**: 105 minutos
 
-12. **[Creación de Reportes y Visualización de Datos en Power BI](/Capítulo9/README_9.1.md)**
+12. **[Creación de Reportes y Visualización de Datos en Power BI](./Capítulo9/lab9.md)**
    - **Descripción**: Desarrollo de reportes y dashboards interactivos en Power BI para analizar y visualizar datos de manera efectiva.
    - ⏱️ **Duración estimada**: 105 minutos
 
