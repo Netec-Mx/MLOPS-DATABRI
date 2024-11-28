@@ -1,4 +1,4 @@
-# Laboratorio 8.2. Despliegue, Monitoreo y Evaluación de Modelos.
+# Laboratorio 12. Despliegue, monitoreo y evaluación de modelos
 
 ## Objetivo de la práctica:
 
@@ -17,7 +17,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo8/README_8.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo9/lab9.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](/Capítulo9/lab9.md)**
 
 ---
 
