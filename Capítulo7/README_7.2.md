@@ -1,11 +1,11 @@
-# Laboratorio 7.2. Pipeline de MLOps en Azure Machine Learning Studio 
+# Laboratorio 10. Pipeline de MLOps en Azure Machine Learning Studio 
 
 ## Objetivo de la práctica:
 
 Al finalizar la práctica, serás capaz de:
 
 - Configurar y ejecutar un pipeline en Azure Machine Learning Studio desde el canvas gráfico.
-- Implementar tareas de preprocesamiento, entrenamiento y despliegue del modelo de machine learning.
+- Implementar tareas de preprocesamiento, entrenamiento y despliegue del modelo de Machine Learning.
 - Validar el pipeline mediante la ejecución de inferencias en el modelo desplegado.
 
 ## Duración aproximada:
@@ -13,31 +13,31 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](/Capítulo7/README_7.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo8/README_8.1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.1.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)**
 
 ---
 
-## Instrucciones 
+## Instrucciones:
 
-### Tarea 1: Cargar el Dataset en el Canvas de Azure ML Studio
+### Tarea 1. Cargar el Dataset en el Canvas de Azure ML Studio.
 
 En esta tarea, cargarás el dataset de productos en el canvas del pipeline de Azure Machine Learning Studio para usarlo como entrada en las siguientes etapas.
 
-Paso 1. Abre tu portal de azure [AQUÍ](https://portal.azure.com) y autenticate con el usuario asignado.
+Paso 1. Abre tu portal de azure [AQUÍ](https://portal.azure.com) y autentícate con el usuario asignado.
 
-Paso 2. En la parte superior busca el servicio de **Azure Machine Learning** y da clic.
+Paso 2. En la parte superior, busca el servicio de **Azure Machine Learning** y da clic.
 
-Paso 3. Selecciona tu workspace creado previamente en el laboratorio 6.1. Puedes identificarlo por tus iniciales. Da clie en el nombre del workspace.
+Paso 3. Selecciona tu workspace creado previamente en el laboratorio 7 (puedes identificarlo por tus iniciales). Da clic en el nombre del workspace.
 
 ![lab7.2-1](../images/imgl7.2/img1.png)
 
-Paso 4. Ahora da clic en **Lunch studio**
+Paso 4. Ahora da clic en **Lunch studio**.
 
 ![lab7.2-2](../images/imgl7.2/img2.png)
 
 **NOTA:** Espera a que cargue unos segundos.
 
-Paso 5. En el menú laterial izquierdo da clic en **Data** y luego en **+ Create**.
+Paso 5. En el menú laterial izquierdo, da clic en **Data** y luego en **+ Create**.
 
 ![lab7.2-3](../images/imgl7.2/img3.png)
 
@@ -45,7 +45,7 @@ Paso 6. Define el nombre del dataset escribe **`productos`** en el campo **Name*
 
 ![lab7.2-4](../images/imgl7.2/img4.png)
 
-Paso 7. En la siguiente ventana selecciona **From local files** y da clic en **Next**.
+Paso 7. En la siguiente ventana, selecciona **From local files** y da clic en **Next**.
 
 ![lab7.2-5](../images/imgl7.2/img5.png)
 
@@ -55,41 +55,41 @@ Paso 8. Copia y pega la siguiente URL en una ventana de tu navegador y descarga 
 https://s3.us-west-2.amazonaws.com/labs.netec.com/courses/MLOPS_Databricks/V0.0.1/productos.csv
 ```
 
-Paso 9. Selecciona **Azure Blob Storage** y el nombre del storage que creaste en el laboratorio 6.1, clic en **Next**
+Paso 9. Selecciona **Azure Blob Storage**,el nombre del storage que creaste en el laboratorio 7 y da clic en **Next**.
 
 ![lab7.2-6](../images/imgl7.2/img6.png)
 
-Paso 10. Da clic en el botón **Upload files or folder**, busca y carga tu archivo de datos. Luego da clic en **Next**.
+Paso 10. Da clic en el botón **Upload files or folder**, busca y carga tu archivo de datos. Luego, da clic en **Next**.
 
-Paso 11. En la sección de **Settings** deja los valores por defecto y da clic en **Next**
+Paso 11. En la sección de **Settings** deja los valores por defecto y da clic en **Next**.
 
 Paso 12. Clic en **Next**.
 
 Paso 13. Clic en **Create**.
 
-**NOTA:** El proceso tardara unos segundos.
+**NOTA:** El proceso tardará unos segundos.
 
 **¡TAREA FINALIZADA!**
 
 El dataset ha sido creado y está disponible bajo el nombre `producto`.
 
-### Tarea 2: Creación de un Pipeline en Azure ML Studio.
+### Tarea 2. Creación de un Pipeline en Azure ML Studio.
 
-En esta tarea crearas el pipeline que tomara los datos, preparar, dividira, entrenada y validara para el proceso del modelo.
+En esta tarea crearás el pipeline que tomará los datos, preparará, dividirá, entrenará y validará para el proceso del modelo.
 
-Paso 1. En el menú lateral izquierdo selecciona la opción **Pipelines**.
+Paso 1. En el menú lateral izquierdo, selecciona la opción **Pipelines**.
 
 ![lab7.2-7](../images/imgl7.2/img7.png)
 
-Paso 2. Da clic en el botón **+ New pipeline**
+Paso 2. Da clic en el botón **+ New pipeline**.
 
 ![lab7.2-8](../images/imgl7.2/img8.png)
 
-Paso 3. Da clic en el simbolo **+** para crear un nuevo pipeline.
+Paso 3. Da clic en el símbolo **+** para crear un nuevo pipeline.
 
 ![lab7.2-9](../images/imgl7.2/img9.png)
 
-Paso 4. Ahora selecciona la opcion **Data** del menú vertical izquierdo y luego arrastra tu dataset **producto** hacia el canvas y sueltalo.
+Paso 4. Ahora, selecciona la opcion **Data** del menú vertical izquierdo y arrastra tu dataset **producto** hacia el canvas y suéltalo.
 
 ![lab7.2-10](../images/imgl7.2/img10.png)
 
@@ -97,7 +97,7 @@ Paso 4. Ahora selecciona la opcion **Data** del menú vertical izquierdo y luego
 
 El dataset ha sido cargado y está disponible en el pipeline bajo el nombre `producto`.
 
-### Tarea 3: Preprocesamiento de Datos con Script en Python
+### Tarea 3. Preprocesamiento de Datos con Script en Python.
 
 Usaremos un script de Python para aplicar transformaciones al dataset, como la normalización o creación de nuevas características.
 
@@ -105,19 +105,19 @@ Paso 1. Selecciona del menú izquierdo, **Component** luego **Python Language** 
 
 ![lab7.2-11](../images/imgl7.2/img11.png)
 
-Paso 2. Arrastralo al canvas debajo del dataset **productos**.
+Paso 2. Arrástralo al canvas debajo del dataset **productos**.
 
 ![lab7.2-12](../images/imgl7.2/img12.png)
 
-Paso 3. Ahora Conecta el dataset **productos** al script de python como lo muestra la imagen.
+Paso 3. Conecta el dataset **productos** al script de python como lo muestra la imagen:
 
 ![lab7.2-13](../images/imgl7.2/img13.png)
 
-Paso 4. Ahora selecciona el rectangulo del script y da clic en el botón lateral derecho que expande las propiedades del script.
+Paso 4. Selecciona el rectangulo del script y da clic en el botón lateral derecho que expande las propiedades del script.
 
 ![lab7.2-14](../images/imgl7.2/img14.png)
 
-Paso 5. Borra todo el codigo predeterminado y copia y pega el siguiente codigo dentro de la seccion del script.
+Paso 5. Borra todo el código predeterminado y copia y pega el siguiente código dentro de la seccion del script:
 
 ```
 import pandas as pd
@@ -163,11 +163,11 @@ def azureml_main(dataframe1=None, dataframe2=None):
     return df_ml
 ```
 
-Paso 6. Una vez editado, baja a la sección **Node information** y agrega una descripción de lo que hara el script. Escribe **`Procesamiento de Datos`**
+Paso 6. Una vez editado, baja a la sección **Node information** y agrega una descripción sobre lo que hará el script. Escribe **`Procesamiento de Datos`**.
 
 ![lab7.2-15](../images/imgl7.2/img15.png)
 
-Paso 7. Da clic en el botón **Save**
+Paso 7. Da clic en el botón **Save**.
 
 ![lab7.2-16](../images/imgl7.2/img16.png)
 
@@ -175,9 +175,9 @@ Paso 7. Da clic en el botón **Save**
 
 El script de procesamiento ha sido cargado y está listo.
 
-### Tarea 4: Eliminar Filas Duplicadas en el Dataset de Entrenamiento
+### Tarea 4. Eliminar filas duplicadas en el Dataset de entrenamiento.
 
-Usaremos el componente `Remove_Duplicate_Rows` para eliminar duplicados en el conjunto de datos de entrenamiento.
+Usarás el componente `Remove_Duplicate_Rows` para eliminar duplicados en el conjunto de datos de entrenamiento.
 
 Paso 1. En el buscador de componentes escribe **`Remove`** y espera el resultado del filtro. Arrastra el componente **Remove Duplicate Rows** al canvas.
 
@@ -187,7 +187,7 @@ Paso 2. Conecta la salida del script de procesamiento a la entrada del component
 
 ![lab7.2-18](../images/imgl7.2/img18.png)
 
-Paso 3. Has clic en el componende de duplicados para abrir el panel de propiedades y da clic en la opción **Edit column**
+Paso 3. Has clic en el componente de duplicados para abrir el panel de propiedades y da clic en la opción **Edit column**.
 
 ![lab7.2-19](../images/imgl7.2/img19.png)
 
@@ -199,7 +199,7 @@ Paso 5. En la sección **Node information** escribe la descripción **`Sin Dupli
 
 ![lab7.2-21](../images/imgl7.2/img21.png)
 
-Paso 6. Da clic en el botón **Save**
+Paso 6. Da clic en el botón **Save**.
 
 ![lab7.2-16](../images/imgl7.2/img16.png)
 
@@ -207,9 +207,9 @@ Paso 6. Da clic en el botón **Save**
 
 Se han eliminado duplicados en el conjunto de datos de procesamiento.
 
-### Tarea 5: Dividir el Dataset en Entrenamiento y Prueba
+### Tarea 5. Dividir el Dataset en entrenamiento y prueba.
 
-Dividiremos el dataset en dos conjuntos: entrenamiento y prueba, usando el componente `Split_Data` en el canvas.
+Dividirás el dataset en dos conjuntos: entrenamiento y prueba, usando el componente `Split_Data` en el canvas.
 
 Paso 1. En el buscador de componentes escribe **`Split`** y espera el resultado del filtro. Arrastra el componente **Split Data** al canvas.
 
@@ -219,7 +219,7 @@ Paso 2. Conecta la salida del remove duplicate rows a la entrada del componente 
 
 ![lab7.2-23](../images/imgl7.2/img23.png)
 
-Paso 3. Has clic en el componende de split data para abrir el panel de propiedades y configura lo siguiente:
+Paso 3. Has clic en el componente de split data para abrir el panel de propiedades y configura lo siguiente:
 
 - Fraction of rows in the first output dataset = 0.8
 - Random seed = 123
@@ -232,7 +232,7 @@ Paso 4. En la sección **Node information** escribe la descripción **`Sin Dupli
 
 ![lab7.2-25](../images/imgl7.2/img25.png)
 
-Paso 5. Da clic en el botón **Save**
+Paso 5. Da clic en el botón **Save**.
 
 ![lab7.2-16](../images/imgl7.2/img16.png)
 
@@ -241,23 +241,23 @@ Paso 5. Da clic en el botón **Save**
 
 El dataset ha sido dividido en `Entrenamiento` 80% y `Prueba` 20%.
 
-### Tarea 6: Entrenamiento del Modelo de Machine Learning
+### Tarea 6. Entrenamiento del modelo de Machine Learning.
 
 En esta tarea, entrenaremos un modelo de machine learning usando el dataset preprocesado.
 
-Paso 1. Selecciona del menú izquierdo, **Component** luego **Python Language** y **Execute Python Script**.
+Paso 1. Selecciona del menú izquierdo **Component**, luego **Python Language** y **Execute Python Script**.
 
 ![lab7.2-11](../images/imgl7.2/img11.png)
 
-Paso 2. Arrastralo al canvas debajo del componente **Split Data** y conectalo como lo muestra la imagen.
+Paso 2. Arrástralo al canvas debajo del componente **Split Data** y conéctalo como lo muestra la imagen:
 
 ![lab7.2-26](../images/imgl7.2/img26.png)
 
-Paso 3. Has clic en el componende del script de python para abrir el panel de propiedades.
+Paso 3. Has clic en el componende del script de Python para abrir el panel de propiedades.
 
-Paso 4. Borra el contenido del codigo predefinido.
+Paso 4. Borra el contenido del código predefinido.
 
-Paso 5. Copia y pega el siguiene codigo en el editor del componente.
+Paso 5. Copia y pega el siguiente código en el editor del componente.
 
 ```
 import subprocess
@@ -268,7 +268,7 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
 
 # Importar las bibliotecas necesarias
 from azureml.core import Workspace, Model
-from sklearn.linear_model import LinearRegression
+from sklearn.línear_model import línearRegression
 import pickle
 
 def azureml_main(dataframe1=None, dataframe2=None):
@@ -281,11 +281,11 @@ def azureml_main(dataframe1=None, dataframe2=None):
     y = dataframe1["Beneficio neto"]
 
     # Entrenar el modelo
-    model = LinearRegression()
+    model = línearRegression()
     model.fit(X, y)
 
     # Guardar el modelo localmente
-    model_path = "modelo_lineal.pkl"
+    model_path = "modelo_líneal.pkl"
     with open(model_path, "wb") as file:
         pickle.dump(model, file)
 
@@ -297,7 +297,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     # Registrar el modelo en el workspace de Azure ML
     registered_model = Model.register(workspace=ws,
                                       model_path=model_path,
-                                      model_name="modelo_lineal_ventas")
+                                      model_name="modelo_líneal_ventas")
 
     print("Modelo registrado en Azure ML con éxito")
     
@@ -305,7 +305,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     return dataframe1,
 ```
 
-Paso 4. Edita las lineas **31, 32 y 33** con los valores correspondientes. Los puedes encontrar en el icono superior derecha.
+Paso 4. Edita las líneas **31, 32 y 33** con los valores correspondientes. Los puedes encontrar en el ícono superior derecho.
 
 - TU_SUSCRIPCION
 - TU_RG
@@ -317,38 +317,37 @@ Paso 5. En la sección **Node information** escribe la descripción **`Entrenami
 
 ![lab7.2-27](../images/imgl7.2/img27.png)
 
-Paso 6. Da clic en el botón **Save**
+Paso 6. Da clic en el botón **Save**.
 
 ![lab7.2-16](../images/imgl7.2/img16.png)
-
 
 **¡TAREA FINALIZADA!**
 
 El modelo ha sido entrenado y está disponible en el canvas como `Entrenamiento Modelo`.
 
-### Tarea 7: Evaluación y Puntaje del Modelo
+### Tarea 7. Evaluación y puntaje del modelo.
 
-En esta tarea, utilizaremos el conjunto de prueba para evaluar el modelo entrenado y obtener el puntaje de predicción.
+En esta tarea, utilizarás el conjunto de prueba para evaluar el modelo entrenado y obtener el puntaje de predicción.
 
 Paso 1. Selecciona del menú izquierdo, **Component** luego **Python Language** y **Execute Python Script**.
 
 ![lab7.2-11](../images/imgl7.2/img11.png)
 
-Paso 2. Arrastralo al canvas debajo del componente **Split Data** y conectalo como lo muestra la imagen. Ademas agrega la conexión de la salida de **Entrenamiento Modelo** a la entrada de **Dataset2** de la validacion.
+Paso 2. Arrástralo al canvas debajo del componente **Split Data** y conéctalo como lo muestra la imagen. Además, agrega la conexión de la salida de **Entrenamiento Modelo** a la entrada de **Dataset2** de la validacion.
 
 ![lab7.2-28](../images/imgl7.2/img28.png)
 
-Paso 3. Has clic en el componende del script de python para abrir el panel de propiedades.
+Paso 3. Has clic en el componende del script de Python para abrir el panel de propiedades.
 
-Paso 4. Borra el contenido del codigo predefinido.
+Paso 4. Borra el contenido del código predefinido.
 
-Paso 5. Copia y pega el siguiene codigo en el editor del componente.
+Paso 5. Copia y pega el siguiente código en el editor del componente.
 
 ```
 # Importar las bibliotecas necesarias
 import pickle
 from azureml.core import Workspace, Model
-from sklearn.linear_model import LinearRegression
+from sklearn.línear_model import línearRegression
 
 def azureml_main(dataframe1=None, dataframe2=None):
     # Verificar que el dataframe tenga las columnas necesarias
@@ -361,7 +360,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
                    workspace_name="TU_ML_WORKSPACE")
 
     # Cargar el modelo registrado en Azure ML
-    model_path = Model.get_model_path("modelo_lineal_ventas", _workspace=ws)
+    model_path = Model.get_model_path("modelo_líneal_ventas", _workspace=ws)
     with open(model_path, "rb") as file:
         model = pickle.load(file)
 
@@ -378,7 +377,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     return dataframe1,
 ```
 
-Paso 4. Edita las lineas **12, 13 y 14** con los valores correspondientes. Los puedes encontrar en el icono superior derecha.
+Paso 4. Edita las líneas **12, 13 y 14** con los valores correspondientes. Los puedes encontrar en el ícono superior derecha.
 
 - TU_SUSCRIPCION
 - TU_RG
@@ -390,7 +389,7 @@ Paso 5. En la sección **Node information** escribe la descripción **`Puntaje d
 
 ![lab7.2-29](../images/imgl7.2/img29.png)
 
-Paso 6. Da clic en el botón **Save**
+Paso 6. Da clic en el botón **Save**.
 
 ![lab7.2-16](../images/imgl7.2/img16.png)
 
@@ -398,23 +397,23 @@ Paso 6. Da clic en el botón **Save**
 
 El modelo ha sido evaluado y el puntaje está disponible como `Puntaje del Modelo`.
 
-### Tarea 8: Despliegue del Modelo
+### Tarea 8. Despliegue del modelo.
 
-Finalmente, desplegaremos el modelo para el uso en inferencias.
+Finalmente, desplegarás el modelo para el uso en inferencias.
 
 Paso 1. Selecciona del menú izquierdo, **Component** luego **Python Language** y **Execute Python Script**.
 
 ![lab7.2-11](../images/imgl7.2/img11.png)
 
-Paso 2. Arrastralo al canvas debajo del componente **Entrenamiento Modelo** y conectalo como lo muestra la imagen.
+Paso 2. Arrástralo al canvas debajo del componente **Entrenamiento Modelo** y conéctalo como lo muestra la imagen:
 
 ![lab7.2-30](../images/imgl7.2/img30.png)
 
-Paso 3. Has clic en el componende del script de python para abrir el panel de propiedades.
+Paso 3. Has clic en el componende del script de Python para abrir el panel de propiedades.
 
-Paso 4. Borra el contenido del codigo predefinido.
+Paso 4. Borra el contenido del código predefinido.
 
-Paso 5. Copia y pega el siguiene codigo en el editor del componente.
+Paso 5. Copia y pega el siguiente código en el editor del componente.
 
 ```
 import subprocess
@@ -433,7 +432,7 @@ from azureml.core.model import Model
 
 def init():
     global model
-    model_path = Model.get_model_path("modelo_lineal_ventas")
+    model_path = Model.get_model_path("modelo_líneal_ventas")
     with open(model_path, "rb") as file:
         model = pickle.load(file)
 
@@ -463,7 +462,7 @@ def deploy_model():
                    workspace_name="TU_ML_WORKSPACE")
 
     # Cargar el modelo registrado
-    registered_model = Model(ws, name="modelo_lineal_ventas")
+    registered_model = Model(ws, name="modelo_líneal_ventas")
 
     # Crear un entorno personalizado de scikit-learn
     sklearn_env = Environment(name="custom_sklearn_env")
@@ -475,7 +474,7 @@ def deploy_model():
                                        environment=sklearn_env)
 
     deployment_config = AciWebservice.deploy_configuration(cpu_cores=1, memory_gb=1)
-    service_name = "servicio-modelo-lineal"
+    service_name = "servicio-modelo-líneal"
 
     # Implementar el modelo
     service = Model.deploy(workspace=ws,
@@ -491,7 +490,7 @@ def deploy_model():
 deploy_model()
 ```
 
-Paso 4. Edita las lineas **42, 43 y 44** con los valores correspondientes. Los puedes encontrar en el icono superior derecha.
+Paso 4. Edita las líneas **42, 43 y 44** con los valores correspondientes. Los puedes encontrar en el ícono superior derecha.
 
 - TU_SUSCRIPCION
 - TU_RG
@@ -503,11 +502,11 @@ Paso 5. En la sección **Node information** escribe la descripción **`Implement
 
 ![lab7.2-29](../images/imgl7.2/img31.png)
 
-Paso 6. Da clic en el botón **Save**
+Paso 6. Da clic en el botón **Save**.
 
 ![lab7.2-16](../images/imgl7.2/img16.png)
 
-Paso 7. El pipeline final quedara de la siguiente manera.
+Paso 7. El pipeline final quedará de la siguiente manera:
 
 ![lab7.2-33](../images/imgl7.2/img33.png)
 
@@ -515,15 +514,15 @@ Paso 7. El pipeline final quedara de la siguiente manera.
 
 El modelo ha sido desplegado en ACI.
 
-### Tarea 9: Ejecutar el Pipeline de Azure Machine Learning Studio
+### Tarea 9. Ejecutar el Pipeline de Azure Machine Learning Studio.
 
-En esta tarea probaras el funcionamiento del pipeline creado.
+En esta tarea probarás el funcionamiento del pipeline creado.
 
-Paso 1. Clic en el botón **Configure & Submit**
+Paso 1. Clic en el botón **Configure & Submit**.
 
 ![lab7.2-34](../images/imgl7.2/img34.png)
 
-Paso 2. Configura la pestaña **Basics** como lo muestra la imagen.
+Paso 2. Configura la pestaña **Basics** como lo muestra la imagen:
 
 ![lab7.2-35](../images/imgl7.2/img35.png)
 
@@ -531,33 +530,33 @@ Paso 3. Clic en el botón **Next**.
 
 Paso 4. En la sección **Inputs & Outputs** da clic en **Next**.
 
-Paso 5. En la sección **Runtime settings** selecciona **Compute cluster** y da clic en **Create Azure ML Compute cluster.
+Paso 5. En la sección **Runtime settings** selecciona **Compute cluster** y da clic en **Create Azure ML Compute cluster**.
 
 ![lab7.2-35](../images/imgl7.2/img35.png)
 
-Paso 6. Selecciona tu región y el tipo de maquina virtual **Standard_DS11_v2** y da clic en siguiente.
+Paso 6. Selecciona tu región y el tipo de máquina virtual **Standard_DS11_v2** y da clic en siguiente.
 
-**NOTA:** Si el tipo de maquina no esta disponible usa otra.
+**NOTA:** Si el tipo de máquina no esta disponible usa otra.
 
 ![lab7.2-36](../images/imgl7.2/img36.png)
 
 Paso 7. Escribe el nombre del nodo **`ml-compute`** y da clic en **Create**.
 
-**NOTA:** El proceso tardara varios minutos, espera a que este todo creado.
+**NOTA:** El proceso tardará varios minutos, espera a que esté todo creado.
 
 ![lab7.2-37](../images/imgl7.2/img37.png)
 
-Paso 8. Cuando ya este creada, da clic en el botón **Review + Submit**.
+Paso 8. Cuando ya esté creada, da clic en el botón **Review + Submit**.
 
 ![lab7.2-38](../images/imgl7.2/img38.png)
 
 Paso 9. Finalmente **Submit**.
 
-Paso 10. Eso creara el Job que puedes validar en la sección **Jobs** lateral izquierdo. Ahi estara ejecutandose.
+Paso 10. Eso creará el Job que puedes validar en la sección **Jobs** lateral izquierdo; ahí estará ejecutándose.
 
 ![lab7.2-39](../images/imgl7.2/img39.png)
 
-Paso 11. Da clic en el experimento que esta en ejecución y veras los detalles del pipeline. Puedes investigar las propiedades que necesites.
+Paso 11. Da clic en el experimento que está en ejecución y observarás los detalles del pipeline. Puedes investigar las propiedades que necesites.
 
 ![lab7.2-40](../images/imgl7.2/img40.png)
 
@@ -567,7 +566,7 @@ Paso 13. Da clic en la propiedad **Outputs + logs** y actualiza frecuentemente.
 
 ![lab7.2-41](../images/imgl7.2/img41.png)
 
-Paso 14. Aparecera el archivo **std_log.txt** y en los logs de la derecha te dara un link y un codigo para la autenticación, sino lo haces el pipeline no avanzara.
+Paso 14. aparecerá el archivo **std_log.txt** y en los logs de la derecha te dará un enlace y un código para la autenticación, si no lo haces, el pipeline no avanzará.
 
 ![lab7.2-42](../images/imgl7.2/img42.png)
 
@@ -575,17 +574,17 @@ Paso 15. Posiblemente tengas que repetir el proceso de autenticación para **Pun
 
 Paso 16. El proceso completo puede tardar varios minutos, espera a que todas las fases del pipeline esten completas.
 
-Paso 17. En la ultima fase de **Implementación del Modelo** aparecera un error indicando sobre un atributo **azureml_main**. Se debe a que Machine Learning Studio está buscando una función **azureml_main** que no existe en este script de despliegue.
+Paso 17. En la última fase de **Implementación del Modelo** aparecerá un error indicando sobre un atributo **azureml_main**. Se debe a que Machine Learning Studio está buscando una función **azureml_main** que no existe en este script de despliegue.
 
 ![lab7.2-43](../images/imgl7.2/img43.png)
 
-Paso 18. Entre la linea **225 y 230** de los logs copia la URL del ednpoint desplegado y guardala en un bloc de notas.
+Paso 18. Entre la línea **225 y 230** de los logs copia la URL del ednpoint desplegado y guárdala en un bloc de notas.
 
 ![lab7.2-44](../images/imgl7.2/img44.png)
 
-Paso 19. No te preocupes el despliegue fue un exito a pesar de ese mensaje.
+Paso 19. ¡No te preocupes! El despliegue fue un éxito a pesar de ese mensaje.
 
-Paso 20. Para probarlo puedes ir a una de tus libretas como la de **Iris** encender tu nodo de computo y al final agregar otra celda copiar el siguiente codigo que realizara la prueba. **Sustitutye la linea 5 con la URL del endpoint creado**
+Paso 20. Para probarlo puedes ir a una de tus libretas como la de **Iris**, encender tu nodo de cómputo y al final agregar otra celda. Copiar el siguiente código que realizará la prueba. **Sustitutye la línea 5 con la URL del endpoint creado**.
 
 ```
 import requests
@@ -625,14 +624,14 @@ Has completado de validar tu pipeline de ML y probado el resultado de la predicc
 
 **¡LABORATORIO FINALIZADO!**
 
-### Resultado esperado
+### Resultado esperado:
 
-Creamos un pipeline de MLOps en Azure que abarca la preparación de datos, entrenamiento y despliegue de un modelo de regresión lineal en ACI, logrando un flujo automatizado para predicciones de beneficio neto en tiempo real.
+Creamos un pipeline de MLOps en Azure que abarca la preparación de datos, entrenamiento y despliegue de un modelo de regresión líneal en ACI, logrando un flujo automatizado para predicciones de beneficio neto en tiempo real.
 
 ![lab7.2-45](../images/imgl7.2/img45.png)
 
 ---
 
-**[⬅️ Atrás](/Capítulo7/README_7.1.md)** | **[Lista General](/README.md)** | **[Siguiente ➡️](/Capítulo8/README_8.1.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo7/README_7.1.html)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)**
 
 ---
