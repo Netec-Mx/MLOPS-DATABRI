@@ -34,21 +34,21 @@ Realizarás la creación de un Workspace de Azure Machine Learning Studio y se d
 
 En esta tarea, realiza la autenticación en el portal de Azure.
 
-1. Abre tu navegador web favorito (de preferencia **Google Chrome**).
+Paso 1. Abre tu navegador web favorito (de preferencia **Google Chrome**).
 
-2. Navega a la página principal de Azure Portal: [Azure Portal](https://portal.azure.com/).
+Paso 2. Navega a la página principal de Azure Portal: [Azure Portal](https://portal.azure.com/).
 
-3. Si ya tienes una cuenta de Azure, ingresa tu **dirección de correo electrónico y contraseña asociada**.
+Paso 3. Si ya tienes una cuenta de Azure, ingresa tu **dirección de correo electrónico y contraseña asociada**.
 
 ![Iniciar sesión](../images/imgl6.1/img2.png)
 
-4. Si aún no tienes una cuenta, haz clic en **"Cree una"** y sigue las instrucciones para crearla. A todo esto, necesitas una tarjeta de crédito para la verificación, pero **no se se realizará el cobro** durante el período de prueba.
+Paso 4. Si aún no tienes una cuenta, haz clic en **"Cree una"** y sigue las instrucciones para crearla. A todo esto, necesitas una tarjeta de crédito para la verificación, pero **no se se realizará el cobro** durante el período de prueba.
 
 ![Crear cuenta](../images/imgl6.1/img3.png)
 
-5. Es posible que te solicite realizar una verificación de seguridad adicional, ya sea un código enviado a tu correo electrónico o a tu teléfono. Sigue las instrucciones en pantalla para completar este proceso.
+Paso 5. Es posible que te solicite realizar una verificación de seguridad adicional, ya sea un código enviado a tu correo electrónico o a tu teléfono. Sigue las instrucciones en pantalla para completar este proceso.
 
-6. Una vez iniciada sesión o creada tu cuenta, accede a la interfaz del portal de Azure.
+Paso 6. Una vez iniciada sesión o creada tu cuenta, accede a la interfaz del portal de Azure.
 
 ![Portal Azure](../images/imgl6.1/img1.png)
 
