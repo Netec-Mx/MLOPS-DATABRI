@@ -46,7 +46,7 @@ Paso 1.  Para iniciar, abre tu Portal de Azure en este **[enlace](https://portal
 
 Paso 2.  Busca el servicio de **`Azure Storage Account`** en la parte superior central del portal y haz clic en **`Storage accounts`**.
 
-![storaccount](../images/imgl6.Paso 2/img1.png)
+![storaccount](../images/imgl6/img1.png)
 
 Paso 3.  En la parte superior izquierda, haz clic en el botón **`Create`**.
 
