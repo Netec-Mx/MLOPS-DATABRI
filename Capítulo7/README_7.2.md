@@ -268,7 +268,7 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
 
 # Importar las bibliotecas necesarias
 from azureml.core import Workspace, Model
-from sklearn.línear_model import línearRegression
+from sklearn.linear_model import linearRegression
 import pickle
 
 def azureml_main(dataframe1=None, dataframe2=None):
@@ -281,7 +281,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     y = dataframe1["Beneficio neto"]
 
     # Entrenar el modelo
-    model = línearRegression()
+    model = linearRegression()
     model.fit(X, y)
 
     # Guardar el modelo localmente
@@ -297,7 +297,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     # Registrar el modelo en el workspace de Azure ML
     registered_model = Model.register(workspace=ws,
                                       model_path=model_path,
-                                      model_name="modelo_líneal_ventas")
+                                      model_name="modelo_lineal_ventas")
 
     print("Modelo registrado en Azure ML con éxito")
     
@@ -347,7 +347,7 @@ Paso 5. Copia y pega el siguiente código en el editor del componente.
 # Importar las bibliotecas necesarias
 import pickle
 from azureml.core import Workspace, Model
-from sklearn.línear_model import línearRegression
+from sklearn.linear_model import linearRegression
 
 def azureml_main(dataframe1=None, dataframe2=None):
     # Verificar que el dataframe tenga las columnas necesarias
