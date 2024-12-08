@@ -306,9 +306,11 @@ def azureml_main(dataframe1=None, dataframe2=None):
         pickle.dump(model, file)
 
     # Configurar el acceso al workspace de Azure ML
-    ws = Workspace(subscription_id="TU_SUSCRIPCION",
-                   resource_group="TU_RG",
-                   workspace_name="TU_ML_WORKSPACE")
+    ws = Workspace(
+        subscription_id="TU_SUSCRIPCION",
+        resource_group="TU_RG",
+        workspace_name="TU_ML_WORKSPACE"
+    )
 
     # Registrar el modelo en el workspace de Azure ML
     registered_model = Model.register(
@@ -374,8 +376,8 @@ def azureml_main(dataframe1=None, dataframe2=None):
 
     # Configurar el acceso al workspace de Azure ML
     ws = Workspace(subscription_id="TU_SUSCRIPCION",
-                   resource_group="TU_RG",
-                   workspace_name="TU_ML_WORKSPACE")
+        resource_group="TU_RG",
+        workspace_name="TU_ML_WORKSPACE")
 
     # Cargar el modelo registrado en Azure ML
     model_path = Model.get_model_path("modelo_lineal_ventas", _workspace=ws)
@@ -450,7 +452,7 @@ from azureml.core.model import Model
 
 def init():
     global model
-    model_path = Model.get_model_path("modelo_lneal_ventas")
+    model_path = Model.get_model_path("modelo_lineal_ventas")
     with open(model_path, "rb") as file:
         model = pickle.load(file)
 
@@ -476,8 +478,8 @@ from azureml.core.webservice import AciWebservice
 def deploy_model():
     # Configurar el acceso al workspace de Azure ML
     ws = Workspace(subscription_id="TU_SUSCRIPCION",
-                   resource_group="TU_RG",
-                   workspace_name="TU_ML_WORKSPACE")
+        resource_group="TU_RG",
+        workspace_name="TU_ML_WORKSPACE")
 
     # Cargar el modelo registrado
     registered_model = Model(ws, name="modelo_lineal_ventas")
@@ -491,7 +493,7 @@ def deploy_model():
     inference_config = InferenceConfig(entry_script="score_script.py",  
                                        environment=sklearn_env)
 
-    deployment_config = AciWebservice.deploy_configuration(cpu_cores=2, memory_gb=2)
+    deployment_config = AciWebservice.deploy_configuration(cpu_cores=2, memory_gb=3)
     service_name = "servicio-modelo-lineal"
 
     # Implementar el modelo
