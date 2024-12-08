@@ -228,7 +228,7 @@ Paso 3. Has clic en el componente de split data para abrir el panel de propiedad
 
 ![lab7.2-24](../images/imgl7.2/img24.png)
 
-Paso 4. En la sección **Node information** escribe la descripción **`Sin Duplicados`**.
+Paso 4. En la sección **Node information** escribe la descripción **`Separacion de Datos`**.
 
 ![lab7.2-25](../images/imgl7.2/img25.png)
 
@@ -285,7 +285,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     model.fit(X, y)
 
     # Guardar el modelo localmente
-    model_path = "modelo_líneal.pkl"
+    model_path = "modelo_lineal.pkl"
     with open(model_path, "wb") as file:
         pickle.dump(model, file)
 
@@ -302,7 +302,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     print("Modelo registrado en Azure ML con éxito")
     
     # Devolver el dataframe de entrada como una tupla
-    return dataframe1,
+    return dataframe1
 ```
 
 Paso 4. Edita las líneas **31, 32 y 33** con los valores correspondientes. Los puedes encontrar en el ícono superior derecho.
@@ -360,7 +360,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
                    workspace_name="TU_ML_WORKSPACE")
 
     # Cargar el modelo registrado en Azure ML
-    model_path = Model.get_model_path("modelo_líneal_ventas", _workspace=ws)
+    model_path = Model.get_model_path("modelo_lineal_ventas", _workspace=ws)
     with open(model_path, "rb") as file:
         model = pickle.load(file)
 
@@ -374,7 +374,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     print("Predicciones:", dataframe1["Prediccion_Beneficio_Neto"].head())
 
     # Devolver el DataFrame de entrada modificado como una tupla
-    return dataframe1,
+    return dataframe1
 ```
 
 Paso 4. Edita las líneas **12, 13 y 14** con los valores correspondientes. Los puedes encontrar en el ícono superior derecha.
@@ -432,7 +432,7 @@ from azureml.core.model import Model
 
 def init():
     global model
-    model_path = Model.get_model_path("modelo_líneal_ventas")
+    model_path = Model.get_model_path("modelo_lneal_ventas")
     with open(model_path, "rb") as file:
         model = pickle.load(file)
 
@@ -462,7 +462,7 @@ def deploy_model():
                    workspace_name="TU_ML_WORKSPACE")
 
     # Cargar el modelo registrado
-    registered_model = Model(ws, name="modelo_líneal_ventas")
+    registered_model = Model(ws, name="modelo_lineal_ventas")
 
     # Crear un entorno personalizado de scikit-learn
     sklearn_env = Environment(name="custom_sklearn_env")
@@ -474,7 +474,7 @@ def deploy_model():
                                        environment=sklearn_env)
 
     deployment_config = AciWebservice.deploy_configuration(cpu_cores=1, memory_gb=1)
-    service_name = "servicio-modelo-líneal"
+    service_name = "servicio-modelo-lineal"
 
     # Implementar el modelo
     service = Model.deploy(workspace=ws,
