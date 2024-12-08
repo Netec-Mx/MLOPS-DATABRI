@@ -325,7 +325,7 @@ def azureml_main(dataframe1=None, dataframe2=None):
     return dataframe1,
 ```
 
-Paso 4. Edita las líneas **31, 32 y 33** con los valores correspondientes. Los puedes encontrar en el ícono superior derecho.
+Paso 4. Edita las líneas **33, 34 y 35** con los valores correspondientes. Los puedes encontrar en el ícono superior derecho.
 
 - TU_SUSCRIPCION
 - TU_RG
