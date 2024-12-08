@@ -124,10 +124,17 @@ import pandas as pd
 import re
 
 def azureml_main(dataframe1=None, dataframe2=None):
+    # Verificar que el dataframe no sea None
+    if dataframe1 is None:
+        raise ValueError("El dataframe1 no puede ser None. Verifica las entradas.")
+    
     # Verificar y limpiar la columna 'PrecioUd'
     if "PrecioUd" in dataframe1.columns:
         print("Valores de PrecioUd antes de la limpieza:", dataframe1["PrecioUd"].head())
-        
+
+        # Asegurarse de que 'PrecioUd' sea tipo str
+        dataframe1["PrecioUd"] = dataframe1["PrecioUd"].astype(str)
+
         # Limpiar el valor para eliminar símbolos y separadores de manera robusta
         dataframe1["PrecioUd"] = (
             dataframe1["PrecioUd"]
@@ -144,21 +151,29 @@ def azureml_main(dataframe1=None, dataframe2=None):
     else:
         print("La columna 'PrecioUd' no existe en el dataset.")
     
-    # Redondear Beneficio neto
+    # Verificar y limpiar la columna 'Beneficio neto'
     if "Beneficio neto" in dataframe1.columns:
+        print("Valores de Beneficio neto antes de la limpieza:", dataframe1["Beneficio neto"].head())
+        
+        # Asegurarse de que 'Beneficio neto' sea tipo str
+        dataframe1["Beneficio neto"] = dataframe1["Beneficio neto"].astype(str)
+
+        # Limpiar el valor para eliminar símbolos y separadores
         dataframe1["Beneficio neto"] = (
             dataframe1["Beneficio neto"]
-            .str.replace(r"[^0-9,]", "", regex=True)  # Mantener solo números y comas
+            .str.replace(r"[^0-9,]", "", regex=True)
             .str.replace(".", "", regex=False)
             .str.replace(",", ".", regex=False)
             .astype(float)
             .round(2)
         )
-        print("Valores de Beneficio neto después de la conversión:", dataframe1["Beneficio neto"].head())
+        print("Valores de Beneficio neto después de la limpieza:", dataframe1["Beneficio neto"].head())
+    else:
+        print("La columna 'Beneficio neto' no existe en el dataset.")
     
     # Seleccionar las columnas relevantes para ML si existen
     columns_ml = ["PrecioUd", "Unidades", "Beneficio neto"]
-    df_ml = dataframe1[[col for col in columns_ml if col in dataframe1.columns]]
+    df_ml = dataframe1[[col for col in columns_ml if col in dataframe1.columns]].dropna()
     
     return df_ml
 ```
@@ -262,26 +277,27 @@ Paso 5. Copia y pega el siguiente código en el editor del componente.
 ```
 import subprocess
 import sys
+import pickle
+from azureml.core import Workspace, Model
+from sklearn.linear_model import LinearRegression  # Importación correcta
 
 # Instalar scikit-learn si no está disponible
 subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
 
-# Importar las bibliotecas necesarias
-from azureml.core import Workspace, Model
-from sklearn.linear_model import linearRegression
-import pickle
-
 def azureml_main(dataframe1=None, dataframe2=None):
     # Verificar que el dataframe tenga las columnas necesarias
-    if dataframe1 is None or "Unidades" not in dataframe1.columns or "PrecioUd" not in dataframe1.columns or "Beneficio neto" not in dataframe1.columns:
-        raise ValueError("El dataset de entrada debe contener las columnas 'Unidades', 'PrecioUd' y 'Beneficio neto'.")
+    if dataframe1 is None:
+        raise ValueError("El dataframe1 no puede ser None. Verifica las entradas.")
+    required_columns = {"Unidades", "PrecioUd", "Beneficio neto"}
+    if not required_columns.issubset(dataframe1.columns):
+        raise ValueError(f"El dataset de entrada debe contener las columnas {required_columns}.")
 
     # Configurar el modelo y el conjunto de datos
     X = dataframe1[["Unidades", "PrecioUd"]]
     y = dataframe1["Beneficio neto"]
 
     # Entrenar el modelo
-    model = linearRegression()
+    model = LinearRegression()  # Usar la clase LinearRegression
     model.fit(X, y)
 
     # Guardar el modelo localmente
@@ -295,14 +311,16 @@ def azureml_main(dataframe1=None, dataframe2=None):
                    workspace_name="TU_ML_WORKSPACE")
 
     # Registrar el modelo en el workspace de Azure ML
-    registered_model = Model.register(workspace=ws,
-                                      model_path=model_path,
-                                      model_name="modelo_lineal_ventas")
+    registered_model = Model.register(
+        workspace=ws,
+        model_path=model_path,
+        model_name="modelo_lineal_ventas"
+    )
 
     print("Modelo registrado en Azure ML con éxito")
-    
+
     # Devolver el dataframe de entrada como una tupla
-    return dataframe1
+    return dataframe1,
 ```
 
 Paso 4. Edita las líneas **31, 32 y 33** con los valores correspondientes. Los puedes encontrar en el ícono superior derecho.
@@ -347,7 +365,7 @@ Paso 5. Copia y pega el siguiente código en el editor del componente.
 # Importar las bibliotecas necesarias
 import pickle
 from azureml.core import Workspace, Model
-from sklearn.linear_model import linearRegression
+from sklearn.linear_model import LinearRegression
 
 def azureml_main(dataframe1=None, dataframe2=None):
     # Verificar que el dataframe tenga las columnas necesarias
@@ -473,7 +491,7 @@ def deploy_model():
     inference_config = InferenceConfig(entry_script="score_script.py",  
                                        environment=sklearn_env)
 
-    deployment_config = AciWebservice.deploy_configuration(cpu_cores=1, memory_gb=1)
+    deployment_config = AciWebservice.deploy_configuration(cpu_cores=2, memory_gb=2)
     service_name = "servicio-modelo-lineal"
 
     # Implementar el modelo
