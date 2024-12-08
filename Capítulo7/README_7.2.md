@@ -41,7 +41,7 @@ Paso 5. En el menú laterial izquierdo, da clic en **Data** y luego en **+ Creat
 
 ![lab7.2-3](../images/imgl7.2/img3.png)
 
-Paso 6. Define el nombre del dataset escribe **`productos`** en el campo **Name**. Da clic en **Next**.
+Paso 6. Define el nombre del dataset escribe **`productos`** en el campo **Name** y en **`Type`** selecciona **`File`**. Da clic en **Next**.
 
 ![lab7.2-4](../images/imgl7.2/img4.png)
 
