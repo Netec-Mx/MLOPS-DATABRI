@@ -17,7 +17,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Capítulo9/lab9.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Capítulo9/lab9.html)**
 
 ---
 
@@ -482,6 +482,6 @@ El resultado final será representado con la última consulta realizada.
 
 ---
 
-**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Capítulo8/README_8.1.md)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Capítulo9/lab9.md)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Capítulo8/README_8.1.md)** | **[Lista General](https://netec-mx.github.io/MLOPS-DATABRI/)** | **[Siguiente ➡️](https://netec-mx.github.io/MLOPS-DATABRI/Capítulo9/lab9.html)**
 
 ---
