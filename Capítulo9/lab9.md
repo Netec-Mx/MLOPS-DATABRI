@@ -17,7 +17,7 @@ Al finalizar la práctica, serás capaz de:
 
 ---
 
-**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.2.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)**
 
 ---
 
@@ -543,6 +543,6 @@ El resultado esperado del laboratorio finalmente es ver las gráficas con la inf
 
 ---
 
-**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.1.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)**
+**[⬅️ Atrás](https://netec-mx.github.io/MLOPS-DATABRI/Cap%C3%ADtulo8/README_8.2.html)** | **[Lista general](https://netec-mx.github.io/MLOPS-DATABRI/)**
 
 ---
