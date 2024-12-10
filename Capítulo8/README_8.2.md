@@ -226,7 +226,7 @@ env.python.conda_dependencies.add_pip_package("joblib")
 inference_config = InferenceConfig(entry_script="score.py", environment=env)
 
 # Configurar el despliegue
-deployment_config = AciWebservice.deploy_configuration(cpu_cores=1, memory_gb=1)
+deployment_config = AciWebservice.deploy_configuration(cpu_cores=2, memory_gb=4)
 
 # Desplegar el modelo
 service = Model.deploy(workspace=ws,
