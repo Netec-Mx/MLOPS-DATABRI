@@ -256,7 +256,7 @@ env = ws.environments['titanic-env']
 inference_config = InferenceConfig(entry_script="score.py", environment=env)
 
 # Configurar el despliegue en ACI
-aci_config = AciWebservice.deploy_configuration(cpu_cores=1, memory_gb=1)
+aci_config = AciWebservice.deploy_configuration(cpu_cores=2, memory_gb=4)
 
 # Nombre del servicio
 service_name = "titanic-service"
