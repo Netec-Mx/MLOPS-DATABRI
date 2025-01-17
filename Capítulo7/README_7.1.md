@@ -50,7 +50,7 @@ import mlflow
 # Cargar y preparar los datos
 data_path = "data/productos.csv"
 df = pd.read_csv(data_path)
-df['PrecioUd.'] = df['PrecioUd.'].str.replace("€", "").str.replace(".", "", regex=False).str.replace(",", ".").astype(float)
+df['PrecioUd.'] = df['PrecioUd'].str.replace("€", "").str.replace(".", "", regex=False).str.replace(",", ".").astype(float)
 df['Beneficio neto'] = df['Beneficio neto'].str.replace("€", "").str.replace(".", "", regex=False).str.replace(",", ".").astype(float)
 
 # Variables predictoras y objetivo
@@ -102,7 +102,7 @@ Paso 6. Repite el paso **3** para crear un nuevo archivo llamado **`environment.
 Paso 7. Agrega el siguiente código en el archivo:
 
 ```
-name: mlops-environment:
+name: mlops-environment
 channels:
   - defaults
 dependencies:
