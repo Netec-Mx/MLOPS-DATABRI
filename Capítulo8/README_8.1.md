@@ -92,6 +92,7 @@ Paso 15. Si te pide confirmación, escribe **Y** y espera la configuración.
 **NOTA:** Estos pasos son demostrativos para la creación del clúster.
 
 **NOTA:** Espera un estimado de **5 a 20 minutos** a que termine de habilitar la extensión de Azure Machine Learning.
+**NOTA:** PUDES AVANZAR CON LAS TAREAS Y PASOS SIGUIENTES.
 
 Paso 16. En la barra de búsqueda del portal, escribe **`Machine Learning`** y selecciónalo.
 
